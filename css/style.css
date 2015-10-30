@@ -1,0 +1,770 @@
+* {
+  box-sizing: border-box; }
+
+header {
+  background: url("../img/alumheader.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh; }
+  header .header-button {
+    background-color: #E2263D;
+    height: 66px;
+    width: 66px;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    cursor: hand; }
+  header .header-button:after {
+    position: absolute;
+    content: '';
+    height: 66px;
+    width: 66px;
+    border: 1px solid #E2263D;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+  header .header-button:hover:after {
+    height: 80px;
+    width: 80px;
+    top: -7px;
+    left: -7px; }
+  header .header-button .fa {
+    color: #fafafa;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 28px;
+    font-weight: 900; }
+  header .top-bar {
+    background-color: #170105;
+    height: 60px; }
+    header .top-bar a {
+      display: inline-block;
+      margin-left: 15px;
+      width: 219px;
+      height: 30px;
+      -webkit-transform: translate(0, 50%);
+      -moz-transform: translate(0, 50%);
+      -o-transform: translate(0, 50%);
+      transform: translate(0, 50%); }
+      header .top-bar a img {
+        width: 100%; }
+  header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Futura PT", Arial, sans-serif;
+    color: #FEFBFC;
+    font-size: 80px;
+    margin-top: 35vh; }
+
+.sidebar {
+  display: block;
+  font-family: "Futura PT", Arial, sans-serif;
+  color: #FEFBFC;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  text-transform: uppercase; }
+  .sidebar input {
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0;
+    color: #170105;
+    background-color: #efefef;
+    width: 17%;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    vertical-align: middle;
+    margin: 0 1.5%;
+    float: left; }
+  .sidebar .filter-label {
+    display: none; }
+  .sidebar .filters {
+    width: 80%;
+    float: left; }
+    .sidebar .filters .filter {
+      position: relative;
+      float: left;
+      width: 22%;
+      margin: 0 1.5%; }
+      .sidebar .filters .filter span {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 35px;
+        background-color: #333;
+        border-radius: 5px;
+        line-height: 35px;
+        vertical-align: middle;
+        cursor: pointer;
+        cursor: hand;
+        -webkit-transition: border-radius 0.2s ease-in-out;
+        -moz-transition: border-radius 0.2s ease-in-out;
+        -o-transition: border-radius 0.2s ease-in-out;
+        transition: border-radius 0.2s ease-in-out; }
+      .sidebar .filters .filter div {
+        position: absolute;
+        right: 7.5%;
+        top: 15px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid #FEFBFC; }
+      .sidebar .filters .filter .filter-items {
+        display: none;
+        background-color: #eee;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        max-height: 300px;
+        overflow: auto;
+        z-index: 9999;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; }
+        .sidebar .filters .filter .filter-items .filter-item {
+          position: relative;
+          background-color: #eee;
+          font-size: 20px;
+          text-align: left;
+          color: #170105;
+          text-transform: uppercase;
+          border-radius: 5px; }
+          .sidebar .filters .filter .filter-items .filter-item button {
+            border: none;
+            background-color: #eee;
+            width: 100%;
+            padding: 10px 0; }
+          .sidebar .filters .filter .filter-items .filter-item button:focus {
+            outline: none; }
+          .sidebar .filters .filter .filter-items .filter-item button:hover {
+            background-color: #E2263D;
+            color: #FEFBFC; }
+          .sidebar .filters .filter .filter-items .filter-item input[type=checkbox] {
+            display: none; }
+          .sidebar .filters .filter .filter-items .filter-item label:before {
+            content: "";
+            position: absolute;
+            left: 5%;
+            bottom: 8px;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            color: #FEFBFC;
+            background-color: #eee;
+            border: 2.5px solid #E2263D;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out; }
+          .sidebar .filters .filter .filter-items .filter-item input[type=checkbox]:checked + label:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e013";
+            line-height: 17px;
+            vertical-align: middle;
+            color: #FEFBFC;
+            font-size: 12px;
+            text-align: center;
+            background-color: #E2263D; }
+          .sidebar .filters .filter .filter-items .filter-item label {
+            font-family: "Futura PT", Arial, sans-serif;
+            font-weight: 400;
+            display: block;
+            padding: 10px 0;
+            padding-left: 22%;
+            width: 100%;
+            text-transform: none;
+            cursor: pointer;
+            cursor: hand; }
+      .sidebar .filters .filter .active-filter {
+        background-color: #000;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-color: #FEFBFC; }
+
+main {
+  font-family: "Futura PT", Arial, sans-serif;
+  min-height: 100vh; }
+  main section {
+    margin: 0 auto;
+    margin-top: 25px;
+    position: relative;
+    width: 85%;
+    background-color: #fff; }
+    main section .kobi-cohort .card:after {
+      background: rgba(225, 147, 171, 0.6); }
+    main section .jet-cohort .card:after {
+      background: rgba(22, 27, 33, 0.6); }
+    main section .ivory-cohort .card:after {
+      background: rgba(206, 195, 165, 0.6); }
+    main section .ivory-cohort .card h2 {
+      background: rgba(206, 195, 165, 0.8); }
+    main section .hazel-cohort .card:after {
+      background: rgba(163, 109, 82, 0.6); }
+    main section .hazel-cohort .card h2 {
+      background: rgba(163, 109, 82, 0.8); }
+    main section .gold-cohort .card:after {
+      background: rgba(216, 191, 82, 0.6); }
+    main section .gold-cohort .card h2 {
+      background: rgba(216, 191, 82, 0.8); }
+    main section .fire-cohort .card:after {
+      background: rgba(234, 28, 28, 0.6); }
+    main section .fire-cohort .card h2 {
+      background: rgba(234, 28, 28, 0.8); }
+    main section .emerald-cohort .card:after {
+      background: rgba(65, 214, 118, 0.6); }
+    main section .emerald-cohort .card h2 {
+      background: rgba(65, 214, 118, 0.8); }
+    main section .diamond-cohort .card:after {
+      background: rgba(137, 207, 240, 0.6); }
+    main section .diamond-cohort .card h2 {
+      background: rgba(137, 207, 240, 0.8); }
+    main section .celadon-cohort .card:after {
+      background: rgba(161, 221, 158, 0.6); }
+    main section .celadon-cohort .card h2 {
+      background: rgba(161, 221, 158, 0.8); }
+    main section .bronze-cohort .card:after {
+      background: rgba(178, 96, 56, 0.6); }
+    main section .bronze-cohort .card h2 {
+      background: rgba(178, 96, 56, 0.8); }
+    main section .amaranth-cohort .card:after {
+      background: rgba(234, 37, 82, 0.6); }
+    main section .amaranth-cohort .card h2 {
+      background: rgba(234, 37, 82, 0.8); }
+    main section .popup {
+      opacity: 0;
+      background-color: #fff;
+      width: 98%;
+      position: absolute;
+      z-index: 1000;
+      left: 1%;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      main section .popup .img-pop {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        width: 23.45%;
+        height: 100%;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out; }
+      main section .popup .bio-container {
+        color: white;
+        position: absolute;
+        left: 23.45%;
+        width: 0;
+        height: 100%;
+        background-color: #E2263D;
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        main section .popup .bio-container .bio-content {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto; }
+          main section .popup .bio-container .bio-content h2 {
+            margin: 0;
+            width: 45%;
+            font-size: 32px;
+            text-transform: uppercase;
+            position: absolute;
+            font-weight: 700;
+            top: 10%;
+            left: 5%; }
+          main section .popup .bio-container .bio-content h3 {
+            margin: 0;
+            width: 45%;
+            font-size: 20px;
+            position: absolute;
+            top: 25%;
+            left: 5%; }
+          main section .popup .bio-container .bio-content h4 {
+            text-transform: none;
+            width: 45%;
+            line-height: 28px;
+            padding-top: 5%;
+            font-size: 20px;
+            position: absolute;
+            bottom: 10%;
+            left: 5%; }
+          main section .popup .bio-container .bio-content p {
+            width: 45%;
+            position: absolute;
+            line-height: 24px;
+            right: 5%;
+            font-size: 18px;
+            bottom: 10%; }
+            main section .popup .bio-container .bio-content p a {
+              display: inline-block;
+              width: 31.33%;
+              text-transform: uppercase;
+              font-size: 16px;
+              color: #FEFBFC;
+              text-align: center;
+              padding: 5px;
+              border: 1px solid #FEFBFC;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out; }
+              main section .popup .bio-container .bio-content p a .fa {
+                display: none; }
+            main section .popup .bio-container .bio-content p a:first-child {
+              margin: 0 2% 0 0; }
+            main section .popup .bio-container .bio-content p a:last-child {
+              margin: 0 0 0 2%; }
+            main section .popup .bio-container .bio-content p a:hover {
+              text-decoration: none;
+              background-color: #72121E; }
+          main section .popup .bio-container .bio-content .bio {
+            top: 10%; }
+        main section .popup .bio-container span.close {
+          position: absolute;
+          color: #170105;
+          text-shadow: none;
+          opacity: 0.5;
+          top: .25%;
+          right: 1%;
+          font-size: 48px;
+          font-weight: 400;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        main section .popup .bio-container span.close:hover {
+          color: #FEFBFC;
+          opacity: 1;
+          -webkit-transform: rotate(315deg);
+          -moz-transform: rotate(315deg);
+          -o-transform: rotate(315deg);
+          transform: rotate(315deg); }
+      main section .popup .img-pop-animate {
+        opacity: 1;
+        left: 0; }
+      main section .popup .bio-container-animate {
+        width: 76.5%; }
+    main section .popup-animate {
+      opacity: 1; }
+    main section .cohort {
+      position: relative; }
+      main section .cohort .cohort-logo {
+        float: left;
+        width: 47.94%;
+        margin: 1%; }
+        main section .cohort .cohort-logo img {
+          display: block;
+          width: 100%; }
+      main section .cohort .nojQuery.card:before {
+        content: 'VIEW BIO';
+        position: absolute;
+        font-size: 18px;
+        color: #fff;
+        bottom: 20%;
+        left: 50%;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        z-index: 150;
+        text-align: center;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+      main section .cohort .nojQuery.card:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        vertical-align: middle;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        z-index: 100;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+      main section .cohort .nojQuery.card:hover .fun-pic,
+      main section .cohort .nojQuery.card:hover:before {
+        opacity: 1; }
+      main section .cohort .nojQuery.card:hover:after {
+        height: 100%; }
+      main section .cohort .nojQuery.card:hover h2 {
+        bottom: 40%; }
+      main section .cohort .card {
+        position: relative;
+        width: 23%;
+        color: #FEFBFC;
+        background-color: #170105;
+        margin: 1%;
+        display: inline-block;
+        cursor: pointer;
+        cursor: hand; }
+        main section .cohort .card .disciplines {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          z-index: 50; }
+          main section .cohort .card .disciplines .disc {
+            font-size: 20px;
+            width: 42px;
+            height: 42px;
+            background-color: #E2263D;
+            border-radius: 50%;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 42px;
+            vertical-align: middle;
+            margin-bottom: 5px; }
+        main section .cohort .card .pic {
+          display: block;
+          width: 100%; }
+        main section .cohort .card .fun-pic {
+          width: 100%;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 25;
+          opacity: 0;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        main section .cohort .card h2 {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 50px;
+          vertical-align: middle;
+          font-size: 22px;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          z-index: 150;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+
+.fixed {
+  position: fixed;
+  top: -20px;
+  z-index: 9999;
+  background-color: rgba(50, 50, 50, 0.8); }
+
+.clearfix:after {
+  display: table;
+  content: '';
+  clear: both; }
+
+@media screen and (max-width: 1200px) {
+  main section .popup .bio-container .bio-content h2 {
+    font-size: 24px; }
+  main section .popup .bio-container .bio-content p {
+    line-height: 20px;
+    font-size: 16px; }
+  main section .cohort .card .disciplines .disc {
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 18px; }
+  main section .cohort .card h2 {
+    font-size: 20px; } }
+@media screen and (max-width: 1100px) {
+  .sidebar {
+    font-size: 20px; }
+    .sidebar .filters .filter .filter-items .filter-item {
+      font-size: 18px; }
+
+  main section .popup .bio-container .bio-content h2 {
+    font-size: 22px; }
+  main section .popup .bio-container .bio-content p a {
+    font-size: 16px; } }
+@media screen and (max-width: 1024px) {
+  .sidebar input.search {
+    float: right;
+    margin-right: 3%;
+    width: 200px; }
+  .sidebar .filter-label {
+    display: block;
+    color: #FEFBFC;
+    background-color: #333;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    vertical-align: middle;
+    float: left;
+    margin-left: 3%;
+    cursor: pointer;
+    cursor: hand;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; }
+  .sidebar .filter-label:hover {
+    background-color: #000; }
+  .sidebar .filters {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 300px;
+    left: -300px;
+    top: 55px;
+    z-index: 9499;
+    height: 100vh;
+    overflow: visible !important;
+    -webkit-transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .sidebar .filters .filter {
+      float: none;
+      width: 250px;
+      margin: 0 auto; }
+      .sidebar .filters .filter span {
+        text-align: center;
+        margin: 30px auto;
+        width: 250px; }
+        .sidebar .filters .filter span .arrow-down {
+          border: 0;
+          border: solid transparent;
+          border-width: 7px;
+          top: 10px;
+          right: 5%;
+          border-left-color: #FEFBFC; }
+      .sidebar .filters .filter .filter-items {
+        width: 250px;
+        left: 250px;
+        top: 0;
+        border-top-right-radius: 5px; }
+      .sidebar .filters .filter .active-filter {
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0; }
+  .sidebar .filters-animate {
+    left: 0; }
+
+  main section .popup .img-pop {
+    width: 32%; }
+  main section .popup .bio-container {
+    left: 32%; }
+    main section .popup .bio-container .bio-content p a span {
+      display: none; }
+    main section .popup .bio-container .bio-content p a .fa {
+      display: inline-block; }
+  main section .popup .bio-container-animate {
+    width: 68%; }
+  main section .cohort .cohort-logo {
+    width: 64.672%; }
+    main section .cohort .cohort-logo img {
+      height: 100%; }
+  main section .cohort .card {
+    width: 31.33%;
+    margin: 1%; }
+    main section .cohort .card .disciplines .disc {
+      width: 40px;
+      height: 40px;
+      font-size: 19px;
+      line-height: 40px; }
+    main section .cohort .card h2 {
+      font-size: 22px; } }
+@media screen and (max-width: 885px) {
+  main section .popup .arrow-up {
+    opacity: 0;
+    border: solid transparent;
+    border-width: 15px;
+    border-top: 0;
+    border-bottom-color: #E2263D;
+    position: absolute;
+    top: -5%;
+    z-index: 1500; }
+  main section .popup .arrow-up-animate {
+    opacity: 1; }
+  main section .popup .img-pop {
+    opacity: 0; }
+  main section .popup .bio-container {
+    width: 100%;
+    left: 0; }
+    main section .popup .bio-container .bio-content {
+      left: 0; }
+      main section .popup .bio-container .bio-content h2 {
+        line-height: 24px;
+        height: 22px;
+        text-align: left;
+        background-color: #E2263D; }
+      main section .popup .bio-container .bio-content h4 {
+        line-height: 24px; }
+    main section .popup .bio-container span.close {
+      opacity: 0.4; }
+  main section .popup-animate {
+    height: 100%;
+    cursor: auto; }
+  main section .cohort .cohort-logo {
+    width: 64.672%; }
+    main section .cohort .cohort-logo img {
+      height: 100%; }
+  main section .cohort .card {
+    background-color: #fff;
+    width: 31.33%;
+    margin: 1%;
+    vertical-align: top; }
+    main section .cohort .card h2 {
+      font-size: 20px; } }
+@media screen and (max-width: 800px) {
+  main section .popup .bio-container .bio-content p {
+    line-height: 18px; }
+  main section .cohort .card h2 {
+    font-size: 19px; } }
+@media screen and (max-width: 700px) {
+  main section .popup .bio-container .bio-content p {
+    line-height: 17px;
+    font-size: 17px; }
+  main section .popup .bio-container .bio-content h3 {
+    top: 27%; }
+  main section .cohort .cohort-logo {
+    width: 98%; }
+  main section .cohort .nojQuery.card:before {
+    font-size: 28px; }
+  main section .cohort .card {
+    width: 48%; }
+    main section .cohort .card .disciplines .disc {
+      width: 44px;
+      height: 44px;
+      font-size: 21px;
+      line-height: 44px; }
+    main section .cohort .card h2 {
+      font-size: 24px; } }
+@media screen and (max-width: 640px) {
+  main section .cohort .nojQuery.card:before {
+    font-size: 24px; } }
+@media screen and (max-width: 600px) {
+  main section .popup .bio-container .bio-content p {
+    line-height: 16px;
+    font-size: 16px; }
+  main section .cohort .card h2 {
+    font-size: 22px; } }
+@media screen and (max-width: 550px) {
+  .sidebar .filters {
+    width: 100%;
+    left: -100%; }
+    .sidebar .filters .filter span {
+      border-top-right-radius: 5px; }
+      .sidebar .filters .filter span .arrow-down {
+        border: 0;
+        border: solid transparent;
+        border-width: 7px;
+        top: 15px;
+        right: 8%;
+        border-top-color: #FEFBFC; }
+    .sidebar .filters .filter .filter-items {
+      left: 0;
+      top: 35px;
+      border-top-right-radius: 0; }
+    .sidebar .filters .filter .active-filter {
+      background-color: #5C0F19;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-color: #FEFBFC; }
+  .sidebar .filters-animate {
+    left: 0; }
+
+  main section .popup .arrow-up {
+    top: -2%; }
+  main section .popup .bio-container .bio-content h2 {
+    width: 80%;
+    left: 10%;
+    top: 5%;
+    font-size: 32px; }
+  main section .popup .bio-container .bio-content h3 {
+    width: 80%;
+    left: 10%;
+    top: 12.5%;
+    font-size: 20px; }
+  main section .popup .bio-container .bio-content h4 {
+    width: 80%;
+    left: 10%;
+    top: 17.5%; }
+  main section .popup .bio-container .bio-content .bio {
+    width: 80%;
+    left: 10%;
+    top: 45%;
+    font-size: 18px;
+    line-height: 20px; }
+  main section .popup .bio-container .bio-content p {
+    width: 80%;
+    left: 10%;
+    bottom: 5%; }
+    main section .popup .bio-container .bio-content p a {
+      width: 31.33%; }
+      main section .popup .bio-container .bio-content p a span {
+        display: inline-block; }
+      main section .popup .bio-container .bio-content p a .fa {
+        display: none; }
+  main section .cohort .card h2 {
+    font-size: 20px; } }
+@media screen and (max-width: 480px) {
+  main section .cohort .card {
+    width: 98%; }
+    main section .cohort .card h2 {
+      font-size: 26px; }
+    main section .cohort .card .disciplines {
+      top: 10px;
+      right: 10px; }
+      main section .cohort .card .disciplines .disc {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px; } }
+@media screen and (max-width: 440px) {
+  header h1 {
+    margin-top: 25vh; }
+
+  .sidebar input.search {
+    width: 150px; }
+
+  main section .popup .bio-container .bio-content h2 {
+    font-size: 22px; }
+  main section .popup .bio-container .bio-content h4 {
+    font-size: 18px;
+    line-height: 20px; }
+  main section .popup .bio-container .bio-content .bio {
+    top: 42.5%;
+    font-size: 16px;
+    line-height: 17px; }
+  main section .popup .bio-container .bio-content p a span {
+    display: none; }
+  main section .popup .bio-container .bio-content p a .fa {
+    display: inline-block; } }
+
+/*# sourceMappingURL=style.css.map */

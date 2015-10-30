@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DESIGNATION Student Alumni</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+
+    <script type='text/javascript' src="js/ng-infinite-scroll.min.js"></script>
+</head>
+
+<body ng-app="DesignationAlumni">
+	<header>
+		<div class="top-bar">
+			<a href="http://www.designation.io">
+				<img src="img/logo_white.png" alt="logo">
+			</a>
+		</div>
+		<h1>Meet Our Alumni</h1>
+        <div class="header-button"><i class="fa fa-angle-down"></i></div>
+	</header>
+
+    <nav ng-controller="MainController" class="sidebar clearfix">
+        <span class="filter-label">Filters</span>
+        <ul class="filters clearfix">
+            <li data-filter-category="cohort" class="button-group filter" >
+                <span>
+                    All cohorts
+                    <div class="arrow-down"></div>
+                </span>
+                <ul class="filter-items" id="cohort-list">
+                    <li class="filter-item">
+                        <button class="button" id="all" data-filter=".all">All</button>
+                    </li>
+                    <li class="filter-item" ng-repeat="cohort in cohorts">
+                        <button class="button" id="{{cohort.cohort}}" data-filter=".{{cohort.cohort}}">{{cohort.cohort | capitalizeFirstLetter }}</button>
+                    </li>                   
+                </ul>
+            </li>
+
+            <li data-filter-category="discipline" class="filter-group filter">
+                <span>
+                    Discipline
+                    <div class="arrow-down"></div>
+                </span>
+                <ul class="filter-items">
+                    <li class="filter-item">
+                        <input type="checkbox" id="ux" data-filter=".ux">
+                        <label for="ux">UX Design</label>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox" id="ui" data-filter=".ui">
+                        <label for="ui">UI Design</label>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox" id="dev" data-filter=".dev">
+                        <label for="dev">Front End Dev</label>
+                    </li>
+                </ul>
+            </li>
+
+            <li data-filter-category="availability" class="filter-group filter">
+                <span>
+                    Availability
+                    <div class="arrow-down"></div>
+                </span>
+                <ul class="filter-items">
+                    <li class="filter-item">
+                        <input type="checkbox" id="fulltime" data-filter=".fulltime">
+                        <label for="fulltime">Full Time</label>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox" id="parttime" data-filter=".parttime">
+                        <label for="parttime">Part Time</label>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox" id="freelance" data-filter=".freelance">
+                        <label for="freelance">Freelance</label>
+                    </li>
+                    <li class="filter-item">
+                        <input type="checkbox" id="employed" data-filter=".employed">
+                        <label for="employed">Employed</label>
+                    </li>
+                </ul>
+            </li>
+            <li data-filter-category="location" class="filter-group filter" id="location-list">
+                <span>
+                    Location
+                    <div class="arrow-down"></div>
+                </span>
+                <ul class="filter-items">
+                </ul>
+            </li>
+        </ul>
+
+        <input type="text" class="search" placeholder="Search Alumni"> 
+    </nav>
+
+	<main ng-controller="MainController">
+		<section class="grid clearfix">
+			<div class="cohort {{cohort.cohort}}-cohort clearfix" ng-repeat="cohort in cohorts">
+				<div class="all {{cohort.cohort}} cohort-logo">
+					<img src="{{cohort.logo}}" alt="">
+				</div>
+
+				<div id="{{student.id}}" class="all nojQuery card {{student.cohort}} {{student.skill1}} {{student.skill2}} {{student.skill3}} {{student.available}} {{student.location1}} {{student.location2}} {{student.location3}}" data-category="{{student.cohort}}" ng-repeat="student in cohort.students | orderBy: 'name'"> 
+					<ul class="disciplines">
+						<li class="disc" ng-repeat="skill in student.skills">{{skill}}</li>
+					</ul>
+
+					<img src="{{student.headshot}}" alt="" class="pic">
+					<img src="{{student.headshot_funny}}" alt="" class="fun-pic">
+
+					<h2 class="name">{{student.name}}</h2>
+				</div>
+			</div>
+            <!-- <p class="empty-message">No students available</p> -->
+		</section>
+	</main>
+
+	<!-- Apps -->
+	<script src="js/app.js"></script>
+	<script src="js/filter.js"></script>
+
+	<!-- Controllers -->
+	<script src="js/controllers/MainController.js"></script>
+
+	<!-- Services -->
+	<script src="js/services/dataFactory.js"></script>
+
+    <!-- Other -->
+    <script src="js/templates.js"></script>
+    <script src="js/oop.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/filters.js"></script>
+    <!-- <script src="js/events.js"></script> -->
+
+	<!-- Main -->
+    <!-- <script src="js/ogscript.js"></script> -->
+    <script src="js/script.js"></script>
+  	<script src="js/isotope.pkgd.js"></script>
+
+</body>
+
+</html>
