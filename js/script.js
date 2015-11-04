@@ -22,7 +22,7 @@ $(document).ready(function() {
   //append locations to sidebar without duplicate locations
   var duplicates = [];
   var locArray = [];
-  
+
   $.ajax({
     url: "json/main.json",
     async: false,
@@ -32,9 +32,8 @@ $(document).ready(function() {
 
           for (var loc in data.cohorts[cohort].students[student].location) {
             var studentLoc = data.cohorts[cohort].students[student].location[loc];
-            if (duplicates.indexOf(studentLoc) == -1) {
+            if (locArray.indexOf(studentLoc) == -1) {
               locArray.push(studentLoc);
-              duplicates.push(studentLoc);
             }
           }
         }
@@ -54,7 +53,6 @@ $(document).ready(function() {
     attrFilters();
     cohortFilters();
     searchFilter();
-
 });
 
 

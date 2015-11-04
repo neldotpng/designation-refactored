@@ -1,10 +1,20 @@
+/*
+** Filter Click Events
+** Layout and Filter functionality change with window resolution
+*/
+
 (function(){
+    // Standard Width
+
 	$(document).on('click', '.filter span', function() {
 		$(this).toggleClass('active-filter');
         $(this).parent().siblings('.filter').children('.filter-items').hide();
         $(this).parent().siblings('.filter').children('span').removeClass('active-filter').children().removeClass('active-filter');
         $(this).siblings('.filter-items').slideToggle(200);
 	});
+
+
+    // Width < 885px
 
 	$(document).on('click', '.filter-label', function() {
         var scrollTopPos = $('main section').offset().top - 80;
@@ -24,6 +34,12 @@
             $('.filters').toggleClass('filters-animate');
         }
     });
+    
+
+    /*
+    ** Prevent Scrolling outside of container
+    ** when bottom of scroll bar in filter is reached.
+    */
 
     $('.filter-items').bind('mousewheel DOMMouseScroll', function(e) {
         var scrollTo = null;

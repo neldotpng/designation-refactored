@@ -13,14 +13,11 @@
 					"headshot_funny" : "img/kobi/jimmy-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui", "dev"],
-					"skill1" : "ui",
-					"skill2" : "dev",
 					"portfolio" : "jjyoon.com",
 					"linkedin" : "N/A",
 					"twitter" : "N/A",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Jimmy is a UI designer with supporting skills in UX and front-end development."
 				},
 				{
@@ -30,14 +27,11 @@
 					"headshot_funny" : "img/kobi/shreya-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui", "dev"],
-					"skill1" : "ui",
-					"skill2" : "dev",
 					"portfolio" : "behance.net/shreyai",
 					"linkedin" : "linkedin.com/pub/shreya-indukuri/20/668/a19",
 					"twitter" : "N/A",
 					"available" : "fulltime",
 					"location" : ["Hanover, NH"],
-					"location1" : "HanoverNH",
 					"bio" : "Shreya is a rising senior at Dartmouth College interested in UI, UX, and interaction design."
 				},
 				{
@@ -47,14 +41,11 @@
 					"headshot_funny" : "img/kobi/dave-funny.jpg",
 					"cohort" : "kobi",
  					"skills" : ["ui", "ux"],
- 					"skill1" : "ui",
- 					"skill2" : "ux",
 					"portfolio" : "litteriodigital.com",
 					"linkedin" : "N/A",
 					"twitter" : "N/A",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Dave is a former photographer, now UI designer with a UX mind. He loves Foo Fighters and has wealth of knowledge in Seinfeld quotes and trivia. Don't start quoting Dumb & Dumber though because he'll probably finish the whole script..."
 				},
 				{
@@ -64,14 +55,11 @@
 					"headshot_funny" : "img/kobi/nelson-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["dev", "ui"],
-					"skill1" : "dev",
-					"skill2" : "ui",
 					"portfolio" : "iamnelson.me",
 					"linkedin" : "linkedin.com/in/nelsonschang",
 					"twitter" : "neldotpng",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Nelson is a front end developer with a strong interest in user interface design. He is addicted to music and might die if he goes 24 hours without listening to anything."
 				},
 				{
@@ -81,15 +69,11 @@
 					"headshot_funny" : "img/kobi/brandon-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["dev", "ui"],
-					"skill1" : "dev",
-					"skill2" : "ui",
 					"portfolio" : "brandonfujii.com",
 					"linkedin" : "linkedin.com/in/bfujii",
 					"twitter" : "brandonfujii",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL", "San Francisco, CA"],
-					"location1" : "ChicagoIL",
-					"location2" : "SanFranciscoCA",
 					"bio" : "Brandon is a front-end developer with experience in user interface design. He is studying computer science as a second-year at Northwestern University."
 				},
 				{
@@ -99,14 +83,11 @@
 					"headshot_funny" : "img/kobi/nate-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux", "ui"],
-					"skill1" : "ux",
-					"skill2" : "ui",
 					"portfolio" : "natedoesux.design",
 					"linkedin" : "linkedin.com/in/nathanllewellyn",
 					"twitter" : "nathan_lion",
 					"available" : "fulltime",
 					"location" : ["Provo, UT"],
-					"location1" : "ProvoUT",
 					"bio" : "Nathan is a UX designer with a special interest in interaction design. When he's not geeking out about technology he likes to cycle, hike, build furniture, and listen to great music."
 				},
 				{
@@ -116,14 +97,11 @@
 					"headshot_funny" : "img/kobi/sucy-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui", "ux"],
-					"skill1" : "ui",
-					"skill2" : "ux",
 					"portfolio" : "",
 					"linkedin" : "linkedin.com/pub/sucy-munoz/b9/671/457",
 					"twitter" : "sucy524",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Sucy is a UX/UI designer with a graphic design background. She loves reading books, and quoting random movie quotes that no one gets. 'It's 106 miles to Chicago, we got a full tank of gas, half a pack of cigarettes, it's dark... and we're wearing sunglasses.'"
 				},
 				{
@@ -133,14 +111,11 @@
 					"headshot_funny" : "img/kobi/danny-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux", "ui"],
-					"skill1" : "ux",
-					"skill2" : "ui",
 					"portfolio" : "dannyluber.com",
 					"linkedin" : "linkedin.com/in/dannyluber",
 					"twitter" : "dannyluber",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Danny is an Interaction Designer with a background in business management and marketing."
 				},
 				{
@@ -150,13 +125,11 @@
 					"headshot_funny" : "img/kobi/jenna-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui"],
-					"skill1" : "ui",
 					"portfolio" : "",
 					"linkedin" : "linkedin.com/pub/jenna-reed/90/a22/440",
 					"twitter" : "JennaReedDesign",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Jenna is an amiable UI designer with a background in web design, development, and graphic design.  This music aficionado enjoys a proper mosh pit, psychological driven movies, and the opportunity to enjoy a patio beer with old and new friends alike."
 				},
 				{
@@ -166,13 +139,11 @@
 					"headshot_funny" : "img/kobi/adam-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui"],
-					"skill1" : "ui",
 					"portfolio" : "senese.io",
 					"linkedin" : "linkedin.com/pub/adam-senese/47/bb0/782",
 					"twitter" : "Adam_Sensei",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL"],
-					"location1" : "ChicagoIL",
 					"bio" : "Adam is a Designer/Developer with a love for clean and intuitive user interfaces."
 				},
 				{
@@ -182,14 +153,11 @@
 					"headshot_funny" : "img/kobi/cedric-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ui", "dev"],
-					"skill1" : "ui",
-					"skill2" : "dev",
 					"portfolio" : "cedricmayer.com",
 					"linkedin" : "linkedin.com/pub/james-cedric-mayer/48/440/bb1",
 					"twitter" : "cedricmayer1",
 					"available" : "fulltime",
 					"location" : ["New York, NY"],
-					"location1" : "NewYorkNY",
 					"bio" : "Cedric is a part-time hardware engineer, part-time software engineer, part-time interaction designer and part-time ping pong master with a passion for building complex apps packaged into intuitive interfaces."
 				},
 				{
@@ -199,15 +167,11 @@
 					"headshot_funny" : "img/kobi/cecilia-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux", "ui", "dev"],
-					"skill1" : "ux",
-					"skill2" : "ui",
-					"skill3" : "dev",
 					"portfolio" : "ceciliarichey.com",
 					"linkedin" : "linkedin.com/in/ceciliarichey",
 					"twitter" : "ceciliarichey",
 					"available" : "parttime",
 					"location" : ["Denver, CO"],
-					"location1" : "DenverCO",
 					"bio" : ""
 				},
 				{
@@ -217,14 +181,11 @@
 					"headshot_funny" :  "img/kobi/sarah-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux" , "ui"],
-					"skill1" : "ux",
-					"skill2" : "ui",
 					"portfolio" : "uxsarah.com",
 					"linkedin" : "linkedin.com/in/sarahyoung26",
 					"twitter" : "ux_sarah",
 					"available" : "fulltime",
 					"location" : ["Kailua, HI"],
-					"location1" : "KailuaHI",
 					"bio" : "Sarah is a UX designer with a background in education. Her love for culture and travel brought her to South Korea, where she lived for 3 years. If you witness Sarah turning down a good glass of malbec, take a picture, because that's something that just doesn't happen."
 				},
 				{
@@ -234,14 +195,11 @@
 					"headshot_funny" : "img/kobi/simon-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux", "ui"],
-					"skill1" : "ux",
-					"skill2" : "ui",
 					"portfolio" : "simonkkwan.com",
 					"linkedin" : "linkedin.com/in/simonkkwan",
 					"twitter" : "simonkkwan",
 					"available" : "fulltime",
 					"location" : ["San Francisco, CA"],
-					"location1" : "SanFranciscoCA",
 					"bio" : "Simon loves pretty, simple things. Runs on dunkin'."
 				},
 				{
@@ -251,15 +209,11 @@
 					"headshot_funny" : "img/kobi/wes-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux", "ui"],
-					"skill1" : "ux",
-					"skill2" : "ui",
 					"portfolio" : "westechsun.com/",
 					"linkedin" : "linkedin.com/in/westechsun",
 					"twitter" : "westechsun",
 					"available" : "fulltime",
 					"location" : ["Chicago, IL", "Fort Worth, TX"],
-					"location1" : "ChicagoIL",
-					"location2" : "FortWorthTX",
 					"bio" : "Wes is a 10-year creative services professional with 1,500+ multimedia projects under his belt. His experience includes UX / UI design, product design, project management, creative direction, copywriting, branding, talent management, game development, and client services."
 				},
 				{
@@ -269,13 +223,11 @@
 					"headshot_funny" : "img/kobi/brittany-funny.jpg",
 					"cohort" : "kobi",
 					"skills" : ["ux"],
-					"skill1" : "ux",
 					"portfolio" : "",
 					"linkedin" : "linkedin.com/pub/brittany-l-cowan/b9/408/27a",
 					"twitter" : "frontendflaneur",
 					"available" : "fulltime",
 					"location" : ["Pittsburgh, PA"],
-					"location1" : "PittsburghPA",
 					"bio" : "Brittany is a former Recruiter turned UX professional. When she isn't wireframing, you can catch her with her feet up, cracking open a cold one."
 				}
 			]
@@ -292,15 +244,11 @@
 						"headshot_funny" : "img/jet/jet_kevin_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux", "ui", "dev"],
-						"skill1" : "ux", 
-						"skill2" : "ui",
-						"skill3" : "dev",
 						"portfolio": "N/A",
 						"linkedin" : "linkedin.com/in/kvnkuk",
 						"twitter" : "N/A",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Kevin is a UX focused UI designer with a graphic design background. He loves coffee, comics (batman in specific), and hiphop."
 					},
 					{
@@ -310,14 +258,11 @@
 						"headshot_funny" : "img/jet/jet_abe_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ui", "dev"],
-						"skill1" : "ui",
-						"skill2" : "dev",
 						"portfolio" : "N/A",
 						"linkedin" : "linkedin.com/in/abrahamban",
 						"twitter" : "N/A",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Abraham is a UI Designer and Front-End Developer with a graphic design background. He loves mind-bending movies (Momento), writing scripts, and eating... but not too much though."
 					},
 					{
@@ -327,13 +272,11 @@
 						"headshot_funny" : "img/jet/jet_isaac_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["dev"],
-						"skill1" : "dev",
 						"portfolio" : "",
 						"linkedin" : "linkedin.com/in/iseo12",
 						"twitter": "N/A",
 						"available" : "fulltime",
 						"location" : ["Champaign, IL"],
-						"location1" : "ChampaignIL",
 						"bio" : "Isaac is a wild party animal, chatting it up every moment he gets. Don't let his boisterous lifestyle fool you, he's one of the hardest workers of the land."
 					},
 					{
@@ -343,14 +286,11 @@
 						"headshot_funny" : "img/jet/jet_arielle_funny.jpg",
 						"cohort" : "jet",
  						"skills" : ["ux", "dev"],
- 						"skill1" : "ux",
- 						"skill2" : "dev",
 						"portfolio" : "N/A",
 						"linkedin" : "N/A",
 						"twitter" : "asap_6",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Arielle is an award winning parkour player, mixing beats and creating beautiful chemical works of art used by the finest of neuroscientists."
 
 					},
@@ -361,15 +301,11 @@
 						"headshot_funny" : "img/jet/jet_karen_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux", "ui"],
-						"skill1" : "ux",
-						"skill2" : "ui",
 						"portfolio" : "karenucol.com",
 						"linkedin" : "linkedin.com/in/karenucol",
 						"twitter" : "karenucol",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL", "Seattle, WA"],
-						"location1" : "ChicagoIL",
-						"location2" : "SeattleWA",
 						"bio" : "Karen is a sparkle filled being, derived from sea salt and mermaid magic."
 					},
 					{
@@ -379,14 +315,11 @@
 						"headshot_funny" : "img/jet/jet_caitlyn_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ui", "dev"],
-						"skill1" : "ui",
-						"skill2" : "dev",
 						"portfolio" : "caitlynchildress.com",
 						"linkedin" : "linkedin.com/pub/caitlyn-childress/3b/907/775",
 						"twitter" : "N/A",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Caitlyn is a UI designer and Front End Dev. She enjoys strolling through the Art Institute and hanging out with personality filled dogs."
 					},
 					{
@@ -396,14 +329,11 @@
 						"headshot_funny" : "img/jet/jet_rebecca_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ui", "ux"],
-						"skill1" : "ui",
-						"skill2" : "ux",
 						"portfolio" : "rebeccadianeharris.com",
 						"linkedin" : "linkedin.com/pub/rebecca-harris/b0/b36/492",
 						"twitter" : "bec_bec1",
 						"available" : "fulltime",
 						"location" : ["South Jordan, UT"],
-						"location1" : "SouthJordanUT",
 						"bio" : "Rebecca is a UX/UI designer who has a curious mind, infategable optimism, and a love of strange foods."
 					},
 					{
@@ -413,13 +343,11 @@
 						"headshot_funny" : "img/jet/jet_kaily_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux"],
-						"skill1" : "ux",
 						"portfolio" : "kailygillan.com",
 						"linkedin" : "linkedin.com/pub/kaily-gillan/7b/b80/b16",
 						"twitter" : "N/A",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Kaily is an interaction designer with a deep understanding of UI and HTML/CSS. She loves climbing, corgis, and fish tacos."
 					},
 					{
@@ -429,14 +357,11 @@
 						"headshot_funny" : "img/jet/jet_jisu_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux", "dev"],
-						"skill1" : "ux",
-						"skill2" : "dev",
 						"portfolio" : "jisuhiatt.com",
 						"linkedin" : "linkedin.com/in/parkjisu",
 						"twitter" : "jisuhiatt",
 						"available" : "fulltime",
 						"location" : ["Richmond, VA"],
-						"location1" : "RichmondVA",
 						"bio" : "Ji Su is a UX designer and front-end developer who brings enthusiasm and ambition to every project she works on.  She loves all things design, tech, food, hiking, and science, and could probably spend all day in an art supply store or eating fruit."
 					},
 					{
@@ -446,14 +371,11 @@
 						"headshot_funny" : "img/jet/jet_stephanie_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux", "ui"],
-						"skill1" : "ux",
-						"skill2" : "ui",
 						"portfolio" : "N/A",
 						"linkedin" : "linkedin.com/pub/stephanie-martinez/50/550/a6a",
 						"twitter" : "smartez87",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Stephanie is a UX designer who dabbles in UI. She has a love and respect for language, culture and travel that allows her to bring a fresh perspective to her design work. "
 					},
 					{
@@ -463,13 +385,11 @@
 						"headshot_funny" : "img/jet/jet_catherine_fun.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux"],
-						"skill1" : "ux",
 						"portfolio" : "uxcatherine.com",
 						"linkedin" : "https://ca.linkedin.com/in/uxcatherine",
 						"twitter" : "uxcatherine",
 						"available" : "fulltime",
 						"location" : ["Toronto, ON"],
-						"location1" : "TorontoON",
 						"bio" : ""
 					},
 					{
@@ -479,14 +399,11 @@
 						"headshot_funny" : "img/jet/jet_rachel_funny.jpg",
 						"cohort" : "jet",
 						"skills" : ["ux", "ui"],
-						"skill1" : "ux",
-						"skill2" : "ui",
 						"portfolio" : "N/A",
 						"linkedin" : "N/A",
 						"twitter" : "N/A",
 						"available" : "fulltime",
 						"location" : ["Chicago, IL"],
-						"location1" : "ChicagoIL",
 						"bio" : "Rachel loves scruffy older men with drive, anyone with a side smirk, and chubby ladies that use sporks."
 					}
 
