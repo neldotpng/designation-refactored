@@ -29,7 +29,6 @@ $(document).ready(function() {
     success: function(data){
       for (var cohort in data.cohorts) {
         for (var student in data.cohorts[cohort].students) {
-
           for (var loc in data.cohorts[cohort].students[student].location) {
             var studentLoc = data.cohorts[cohort].students[student].location[loc];
             if (locArray.indexOf(studentLoc) == -1) {
@@ -152,34 +151,32 @@ function searchFilter() {
       $container.isotope();
     }, 500) );
   });
-};
-
-  
+}
 
   // search - debounce so filtering doesn't happen every millisecond
 function debounce(func, wait, immediate) {
 
-   var timeout;
-   // Calling debounce returns a new anonymous function
-   return function() {
-       // reference the context and args for the setTimeout function
-     var context = this,
-         args = arguments;
+  var timeout;
+  // Calling debounce returns a new anonymous function
+  return function() {
+     // reference the context and args for the setTimeout function
+   var context = this,
+       args = arguments;
 
-     var callNow = immediate && !timeout;
-     clearTimeout(timeout);
+   var callNow = immediate && !timeout;
+   clearTimeout(timeout);
 
-     // Set the new timeout
-     timeout = setTimeout(function() {
-          timeout = null;
+   // Set the new timeout
+   timeout = setTimeout(function() {
+        timeout = null;
 
-          if (!immediate) {
+        if (!immediate) {
 
-            func.apply(context, args);
-          }
-     }, wait);
-   };
- }
+          func.apply(context, args);
+        }
+   }, wait);
+  };
+}
 
 $(window).resize(function() {
   debounce(initIso(), 1000);

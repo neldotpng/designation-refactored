@@ -2,9 +2,9 @@
   box-sizing: border-box; }
 
 header {
-  background: url("../img/alumheader.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh; }
+  position: relative;
+  height: 100vh;
+  overflow: hidden; }
   header .header-button {
     background-color: #E2263D;
     height: 66px;
@@ -60,13 +60,35 @@ header {
       header .top-bar a img {
         width: 100%; }
   header h1 {
+    position: absolute;
+    z-index: 250;
+    top: 50%;
+    left: 50%;
+    width: 100%;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Futura PT", Arial, sans-serif;
     color: #FEFBFC;
     font-size: 80px;
-    margin-top: 35vh; }
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  header .dynamic {
+    width: 100%;
+    background-color: #1e1e1e; }
+    header .dynamic img {
+      width: 20%;
+      float: left; }
+  header .dynamic:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3); }
 
 .sidebar {
   display: block;
@@ -84,9 +106,10 @@ header {
     border: 0;
     color: #170105;
     background-color: #efefef;
-    width: 30%;
+    width: 25%;
     height: 35px;
     line-height: 35px;
+    letter-spacing: 1px;
     padding: 0 15px;
     vertical-align: middle;
     margin: 0 1.5%;
@@ -95,13 +118,13 @@ header {
   .sidebar .filter-label {
     display: none; }
   .sidebar .filters {
-    width: 60%;
+    width: 70%;
     float: left;
     margin-left: 0.5%; }
     .sidebar .filters .filter {
       position: relative;
       float: left;
-      width: 30.33%;
+      width: 25%;
       margin: 0 1.5%; }
       .sidebar .filters .filter span {
         display: block;
@@ -112,6 +135,7 @@ header {
         border-radius: 5px;
         line-height: 35px;
         vertical-align: middle;
+        letter-spacing: 1px;
         cursor: pointer;
         cursor: hand;
         -webkit-transition: border-radius 0.2s ease-in-out;
@@ -199,7 +223,7 @@ header {
 
 main {
   font-family: "Futura PT", Arial, sans-serif;
-  min-height: 100vh; }
+  min-height: 50vh; }
   main section {
     margin: 0 auto;
     margin-top: 25px;
@@ -212,40 +236,22 @@ main {
       background: rgba(22, 27, 33, 0.6); }
     main section .ivory-cohort .card:after {
       background: rgba(206, 195, 165, 0.6); }
-    main section .ivory-cohort .card h2 {
-      background: rgba(206, 195, 165, 0.8); }
     main section .hazel-cohort .card:after {
       background: rgba(163, 109, 82, 0.6); }
-    main section .hazel-cohort .card h2 {
-      background: rgba(163, 109, 82, 0.8); }
     main section .gold-cohort .card:after {
       background: rgba(216, 191, 82, 0.6); }
-    main section .gold-cohort .card h2 {
-      background: rgba(216, 191, 82, 0.8); }
     main section .fire-cohort .card:after {
       background: rgba(234, 28, 28, 0.6); }
-    main section .fire-cohort .card h2 {
-      background: rgba(234, 28, 28, 0.8); }
     main section .emerald-cohort .card:after {
       background: rgba(65, 214, 118, 0.6); }
-    main section .emerald-cohort .card h2 {
-      background: rgba(65, 214, 118, 0.8); }
     main section .diamond-cohort .card:after {
       background: rgba(137, 207, 240, 0.6); }
-    main section .diamond-cohort .card h2 {
-      background: rgba(137, 207, 240, 0.8); }
     main section .celadon-cohort .card:after {
       background: rgba(161, 221, 158, 0.6); }
-    main section .celadon-cohort .card h2 {
-      background: rgba(161, 221, 158, 0.8); }
     main section .bronze-cohort .card:after {
       background: rgba(178, 96, 56, 0.6); }
-    main section .bronze-cohort .card h2 {
-      background: rgba(178, 96, 56, 0.8); }
     main section .amaranth-cohort .card:after {
       background: rgba(234, 37, 82, 0.6); }
-    main section .amaranth-cohort .card h2 {
-      background: rgba(234, 37, 82, 0.8); }
     main section .popup {
       opacity: 0;
       background-color: #fff;
@@ -328,12 +334,14 @@ main {
               color: #FEFBFC;
               text-align: center;
               padding: 5px;
-              border: 1px solid #FEFBFC;
+              border: 2.5px solid #FEFBFC;
               margin: 0 2% 0 0;
               -webkit-transition: all 0.3s ease-in-out;
               -moz-transition: all 0.3s ease-in-out;
               -o-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out; }
+              main section .popup .bio-container .bio-content p a span {
+                letter-spacing: 0.5px; }
               main section .popup .bio-container .bio-content p a .fa {
                 display: none; }
             main section .popup .bio-container .bio-content p a:hover {
@@ -389,7 +397,7 @@ main {
         position: absolute;
         font-size: 18px;
         color: #fff;
-        bottom: 20%;
+        bottom: 0;
         left: 50%;
         padding-bottom: 5px;
         border-bottom: 2px solid #fff;
@@ -425,6 +433,8 @@ main {
         height: 100%; }
       main section .cohort .nojQuery.card:hover h2 {
         bottom: 40%; }
+      main section .cohort .nojQuery.card:hover:before {
+        bottom: 20%; }
       main section .cohort .card {
         position: relative;
         width: 23%;
@@ -766,21 +776,18 @@ main {
         font-size: 24px;
         line-height: 50px; } }
 @media screen and (max-width: 440px) {
-  header h1 {
-    margin-top: 25vh; }
-
   .sidebar input.search {
     width: 150px; }
 
   main section .popup .bio-container .bio-content h2 {
-    font-size: 22px; }
+    font-size: 26px; }
   main section .popup .bio-container .bio-content h4 {
-    font-size: 18px;
-    line-height: 20px; }
+    font-size: 20px;
+    line-height: 26px; }
   main section .popup .bio-container .bio-content .bio {
     top: 42.5%;
-    font-size: 16px;
-    line-height: 17px; }
+    font-size: 20px;
+    line-height: 24px; }
   main section .popup .bio-container .bio-content p a span {
     display: none; }
   main section .popup .bio-container .bio-content p a .fa {

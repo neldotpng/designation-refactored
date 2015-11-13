@@ -7,10 +7,12 @@ function Cohort(cohort) {
 	this.cohort = cohort.cohort;
 	this.logo = cohort.logo;
 	this.students = [];
+	this.filtered = [];
 }
 
-Cohort.prototype.constructor = Cohort;
-
+Cohort.prototype.sortCohort = function(sortFunc) {
+	this.students.sort(alphabetize);
+};
 
 /*
 ** Student Constructor
@@ -20,8 +22,10 @@ function Student(student, cohort) {
 	this.id = student.id;
 	this.name = student.name;
 	this.headshot = student.headshot;
+	this.headshot_funny = student.headshot_funny;
 	this.skills = student.skills;
 	this.location = student.location;
+	this.available = student.available;
 	this.bio = student.bio;
 	this.portfolio = student.portfolio;
 	this.twitter = student.twitter;
@@ -29,8 +33,6 @@ function Student(student, cohort) {
 	this.cohort = cohort.cohort;
 	this.year = cohort.year;
 }
-
-Student.prototype.constructor = Student;
 
 Student.prototype.renderSkills = function() {
 	var skills = '';
@@ -45,13 +47,13 @@ Student.prototype.renderSkills = function() {
 		}
 	} else {
 		if (this.skills[0] === 'ux') {
-			skills += "User Experience Design";
+			skills += 'User Experience Design';
 		}
-		else if (this.skills[0] === "ui") {
-			skills += "User Interface Design";
+		else if (this.skills[0] === 'ui') {
+			skills += 'User Interface Design';
 		}
-		else if (this.skills[0] === "dev") {
-			skills += "Front-End Development";
+		else if (this.skills[0] === 'dev') {
+			skills += 'Front-End Development';
 		}
 	}
 
@@ -85,7 +87,7 @@ Student.prototype.renderLinks = function() {
 		portfolio = '';
 	} else {
 		portfolio =
-			'<a class="student-portfolio" target="_blank" href="http://www.' + this.portfolio + '">' +
+			'<a class="student-portfolio" target="_blank" href="' + this.portfolio + '">' +
 				'<span>Portfolio</span>' +
 				'<i class="fa fa-briefcase"></i>' +
 			'</a>';
@@ -95,7 +97,7 @@ Student.prototype.renderLinks = function() {
 		linkedin = '';
 	} else {
 		linkedin =
-			'<a class="student-linkedin" target="_blank" href="http://www.' + this.linkedin + '">' +
+			'<a class="student-linkedin" target="_blank" href="' + this.linkedin + '">' +
 				'<span>LinkedIn</span>' +
 				'<i class="fa fa-linkedin"></i>' +
 			'</a>';
@@ -106,7 +108,7 @@ Student.prototype.renderLinks = function() {
 	} else {
 		email =
 			'<a class="student-email" target="_blank" href="mailto:' + this.email + '">' +
-				'<span>Twitter</span>' +
+				'<span>Email</span>' +
 				'<i class="fa fa-envelope"></i>' +
 			'</a>';
 	}
@@ -158,6 +160,22 @@ function capitalizeFirstLetter(string) {
 var cohorts = [],
 	students = [];
 
+function ajaxCall(callback) {
+	$.ajax({
+		url: '/json/main.json',
+		success: callback,
+		done: function() {
+			console.log('success');
+		},
+		fail: function() {
+			console.log('failed');
+		},
+		always: function() {
+			console.log('complete');
+		}
+	});
+}
+
 function parseStudents(data) {
 	var all = data.cohorts;
 
@@ -172,29 +190,89 @@ function parseStudents(data) {
 			students.push( student );
 		}
 	}
-	console.log(cohorts);
-	console.log(students);
+
+	for ( var k = 0; k < cohorts.length; k++ ) {
+		cohorts[k].sortCohort();
+	}
 }
 
-function ajaxCall(callback) {
-	$.ajax({
-		url: '../json/main.json',
-		success: callback,
-		done: function() {
-			console.log('success');
-		},
-		fail: function() {
-			console.log('failed');
-		},
-		always: function() {
-			console.log('complete');
-		}
-	});
+function myCallback() {
+	var shuffledStudents = [];
+
+	var w = window,
+		width = w.innerWidth,
+		height = w.innerHeight,
+		imgCount;
+
+	shuffledStudents = shuffle(students);
+	imgCount = calcImg(width, height);
+
+	renderHeader(shuffledStudents, imgCount);
+
+	getCohortTemplate('#target', cohorts[0]);
+	getFilters(cohorts);
+}
+
+/*
+** Sorting and Initialization
+*/
+
+function alphabetize(a, b) {
+  if (a.name < b.name)
+    return -1;
+  if (a.name > b.name)
+    return 1;
+  return 0;
 }
 
 function init() {
 	ajaxCall(parseStudents);
+	ajaxCall(myCallback);
 	console.log('initialized');
 }
+
+/*
+** Debounce Function
+*/
+
+function debounce(func, wait, immediate) {
+	var timeout;
+
+	// Calling debounce returns a new anonymous function
+	return function() {
+
+		// reference the context and args for the setTimeout function
+		var context = this,
+			args = arguments;
+
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+
+		// Set the new timeout
+		timeout = setTimeout(function() {
+			timeout = null;
+
+			if (!immediate) {
+				func.apply(context, args);
+			}
+		}, wait);
+	};
+}
+
+
+var count = 0;
+
+function lazyLoading() {
+	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		count++;
+		getCohortTemplate('#target', cohorts[count]);
+    }
+
+    console.log('iran');
+}
+
+var lazyLoader = debounce(lazyLoading, 50);
+
+$(window).on('scroll', lazyLoader);
 
 init();

@@ -1,11 +1,8 @@
-/*
-** Click Interactions
-** Card / Popup
-*/
-
 (function(){
 
+	// Card Position
 	var leftPos;
+
 	var $window = $(window);
 
 	/*
@@ -67,8 +64,8 @@
 
 			// Mobile Popup Height			
             if ( $window.width() <= 550 ) {
-				$('.popup').css('height', popDownHeight);
-				thisCard.css('height', popDownHeight + popDownPos);
+				$('.popup').css('height', popDownHeight / 1.1);
+				thisCard.css('height', (popDownHeight / 1.1) + popDownPos);
             }
 
             $('.arrow-up').css('left', popupArrow);
@@ -96,15 +93,16 @@
 			setTimeout(function() {
 				$('.img-pop').animate({
 					'left': leftPos
-				}, 200, 'linear');
-			}, 300);
+				}, 150, 'linear');
+			}, 200);
 
 			setTimeout(function() {
 				$('.popup-animate').removeClass('popup-animate');
-			}, 500);
+			}, 550);
 
 			setTimeout(function() {
 				$('.popup').remove();
+				popupIsOpen = false;
 			}, 850);
 		
 		// Collapse in modal animation
@@ -116,11 +114,23 @@
 
 			setTimeout(function() {
 				$('.popup').remove();
+				popupIsOpen = false;
 				$('#' + card).addClass('nojQuery').css('height', '')
 					.children('.disciplines').css('visibility', '');
 			}, 300);
 		}
 	}
+
+	/*
+	** Clear Timeouts Function
+	*/
+
+	// function clearTimeouts() {
+	// 	var id = window.setTimeout(function() {}, 0);
+	// 	while (id--) {
+	// 		window.clearTimeout(id); // will do nothing if no timeout with id is present
+	// 	}
+	// }
 
 	/*
 	** Click Events
@@ -143,7 +153,6 @@
 	});
 
 	$(document).on('click', '.close', function() {
-		popupIsOpen = false;
 		bioClose();
 	});
 })();

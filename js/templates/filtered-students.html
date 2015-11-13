@@ -1,0 +1,25 @@
+{{#this}}
+<div class="cohort {{cohort}}-cohort filtered clearfix">
+	{{#if filtered}}
+	<div class="all {{cohort}} cohort-logo">
+        <img src="{{logo}}" alt="Cohort Logo">
+    </div>
+    {{/if}}
+
+    {{~#filtered~}}
+    <div id="{{id}}" class="all nojQuery card {{cohort}} {{#each skills}}{{this}} {{/each}} {{available}}"> 
+        <ul class="disciplines">
+            {{#each skills}}
+            <li class="disc">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <img src="{{headshot}}" alt="Student Pic" class="pic">
+        <img src="{{headshot_funny}}" alt="Student Funny Pic" class="fun-pic">
+
+        <h2 class="name">{{name}}</h2>
+    </div>
+    {{~/filtered~}}
+
+</div>
+{{/this}}
