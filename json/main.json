@@ -1,415 +1,1114 @@
-{
-	"cohorts" : [
+{  
+  "cohorts":[  
+    {  
+      "year":"2015",
+      "cohort":"kobi",
+      "logo":"img/logos/kobi.jpg",
+      "students":[  
+        {  
+          "id":"k15-JimmyYoon",
+          "name":"Jimmy Yoon",
+          "headshot":"img/kobi/jimmy.jpg",
+          "headshot_funny":"img/kobi/jimmy-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui",
+            "dev"
+          ],
+          "portfolio":"http://www.jjyoon.com",
+          "linkedin":"N/A",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[
+            "Chicago, IL"
+          ],
+          "bio":"Jimmy is a UI designer with supporting skills in UX and front-end development."
+        },
+        {  
+          "id":"k15-ShreyaIndukuri",
+          "name":"Shreya Indukuri",
+          "headshot":"img/kobi/shreya.jpg",
+          "headshot_funny":"img/kobi/shreya-funny.jpg",
+          "cohort":"kobi",
+          "skills":[
+            "ui",
+            "dev"
+          ],
+          "portfolio":"http://www.behance.net/shreyai",
+          "linkedin":"http://www.linkedin.com/pub/shreya-indukuri/20/668/a19",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Hanover, NH"
+          ],
+          "bio":"Shreya is a rising senior at Dartmouth College interested in UI, UX, and interaction design."
+        },
+        {  
+          "id":"k15-DaveLitterio",
+          "name":"Dave Litterio",
+          "headshot":"img/kobi/dave.jpg",
+          "headshot_funny":"img/kobi/dave-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui",
+            "ux"
+          ],
+          "portfolio":"http://www.litteriodigital.com",
+          "linkedin":"N/A",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Dave is a former photographer, now UI designer with a UX mind. He loves Foo Fighters and has a wealth of knowledge in Seinfeld quotes and trivia. Don't start quoting Dumb & Dumber though because he'll probably finish the whole script..."
+        },
+        {  
+          "id":"k15-NelsonChang",
+          "name":"Nelson Chang",
+          "headshot":"img/kobi/nelson.jpg",
+          "headshot_funny":"img/kobi/nelson-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "dev",
+            "ui"
+          ],
+          "portfolio":"http://www.iamnelson.me",
+          "linkedin":"http://www.linkedin.com/in/nelsonschang",
+          "twitter":"neldotpng",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Nelson is a front end developer with a strong interest in user interface design. He is addicted to music and might die if he goes 24 hours without listening to anything."
+        },
+        {  
+          "id":"k15-BrandonFujii",
+          "name":"Brandon Fujii",
+          "headshot":"img/kobi/brandon.jpg",
+          "headshot_funny":"img/kobi/brandon-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "dev",
+            "ui"
+          ],
+          "portfolio":"http://www.brandonfujii.com",
+          "linkedin":"http://www.linkedin.com/in/bfujii",
+          "twitter":"brandonfujii",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL",
+            "San Francisco, CA"
+          ],
+          "bio":"Brandon is a front-end developer with experience in user interface design. He is studying computer science as a second-year at Northwestern University."
+        },
+        {  
+          "id":"k15-NathanLlewellyn",
+          "name":"Nathan Llewellyn",
+          "headshot":"img/kobi/nate.jpg",
+          "headshot_funny":"img/kobi/nate-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.natedoesux.design",
+          "linkedin":"http://www.linkedin.com/in/nathanllewellyn",
+          "twitter":"nathan_lion",
+          "available":["fulltime"],
+          "location":[  
+            "Provo, UT"
+          ],
+          "bio":"Nathan is a UX designer with a special interest in interaction design. When he's not geeking out about technology he likes to cycle, hike, build furniture, and listen to great music."
+        },
+        {  
+          "id":"k15-SucyMunoz",
+          "name":"Sucy Munoz",
+          "headshot":"img/kobi/sucy.jpg",
+          "headshot_funny":"img/kobi/sucy-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui",
+            "ux"
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.linkedin.com/pub/sucy-munoz/b9/671/457",
+          "twitter":"sucy524",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Sucy is a UX/UI designer with a graphic design background. She loves reading books, and quoting random movie quotes that no one gets. 'It's 106 miles to Chicago, we got a full tank of gas, half a pack of cigarettes, it's dark... and we're wearing sunglasses.'"
+        },
+        {  
+          "id":"k15-DannyLuber",
+          "name":"Danny Luber",
+          "headshot":"img/kobi/danny.jpg",
+          "headshot_funny":"img/kobi/danny-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.dannyluber.com",
+          "linkedin":"http://www.linkedin.com/in/dannyluber",
+          "twitter":"dannyluber",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Danny is an Interaction Designer with a background in business management and marketing."
+        },
+        {  
+          "id":"k15-JennaReed",
+          "name":"Jenna Reed",
+          "headshot":"img/kobi/jenna.jpg",
+          "headshot_funny":"img/kobi/jenna-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui"
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.linkedin.com/pub/jenna-reed/90/a22/440",
+          "twitter":"JennaReedDesign",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Jenna is an amiable UI designer with a background in web design, development, and graphic design.  This music aficionado enjoys a proper mosh pit, psychological driven movies, and the opportunity to enjoy a patio beer with old and new friends alike."
+        },
+        {  
+          "id":"k15-AdamSenese",
+          "name":"Adam Senese",
+          "headshot":"img/kobi/adam.jpg",
+          "headshot_funny":"img/kobi/adam-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui"
+          ],
+          "portfolio":"http://www.senese.io",
+          "linkedin":"http://www.linkedin.com/pub/adam-senese/47/bb0/782",
+          "twitter":"Adam_Sensei",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Adam is a Designer/Developer with a love for clean and intuitive user interfaces."
+        },
+        {  
+          "id":"k15-CedricMayer",
+          "name":"Cedric Mayer",
+          "headshot":"img/kobi/cedric.jpg",
+          "headshot_funny":"img/kobi/cedric-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ui",
+            "dev"
+          ],
+          "portfolio":"http://www.cedricmayer.com",
+          "linkedin":"http://www.linkedin.com/pub/james-cedric-mayer/48/440/bb1",
+          "twitter":"cedricmayer1",
+          "available":["fulltime"],
+          "location":[  
+            "New York, NY"
+          ],
+          "bio":"Cedric is a part-time hardware engineer, part-time software engineer, part-time interaction designer and part-time ping pong master with a passion for building complex apps packaged into intuitive interfaces."
+        },
+        {  
+          "id":"k15-CeciliaRichey",
+          "name":"Cecilia Richey",
+          "headshot":"img/kobi/cecilia.jpg",
+          "headshot_funny":"img/kobi/cecilia-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui",
+            "dev"
+          ],
+          "skill3":"dev",
+          "portfolio":"http://www.ceciliarichey.com",
+          "linkedin":"http://www.linkedin.com/in/ceciliarichey",
+          "twitter":"ceciliarichey",
+          "available":["parttime"],
+          "location":[  
+            "Denver, CO"
+          ],
+          "bio":""
+        },
+        {  
+          "id":"k15-SarahYoung",
+          "name":"Sarah Young",
+          "headshot":"img/kobi/sarah.jpg",
+          "headshot_funny":"img/kobi/sarah-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.uxsarah.com",
+          "linkedin":"http://www.linkedin.com/in/sarahyoung26",
+          "twitter":"ux_sarah",
+          "available":["fulltime"],
+          "location":[  
+            "Kailua, HI"
+          ],
+          "bio":"Sarah is a UX designer with a background in education. Her love for culture and travel brought her to South Korea, where she lived for 3 years. If you witness Sarah turning down a good glass of malbec, take a picture, because that's something that just doesn't happen."
+        },
+        {  
+          "id":"k15-SimonKwan",
+          "name":"Simon Kwan",
+          "headshot":"img/kobi/simon.jpg",
+          "headshot_funny":"img/kobi/simon-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.simonkkwan.com",
+          "linkedin":"http://www.linkedin.com/in/simonkkwan",
+          "twitter":"simonkkwan",
+          "available":["fulltime"],
+          "location":[  
+            "San Francisco, CA"
+          ],
+          "bio":"Simon loves pretty, simple things. Runs on dunkin'."
+        },
+        {  
+          "id":"k15-WesMartin",
+          "name":"Wes Martin",
+          "headshot":"img/kobi/wes.jpg",
+          "headshot_funny":"img/kobi/wes-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.westechsun.com/",
+          "linkedin":"http://www.linkedin.com/in/westechsun",
+          "twitter":"westechsun",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL",
+            "Fort Worth, TX"
+          ],
+          "bio":"Wes is a 10-year creative services professional with 1,500+ multimedia projects under his belt. His experience includes UX / UI design, product design, project management, creative direction, copywriting, branding, talent management, game development, and client services."
+        },
+        {  
+          "id":"k15-BrittanyCowan",
+          "name":"Brittany Cowan",
+          "headshot":"img/kobi/brittany.jpg",
+          "headshot_funny":"img/kobi/brittany-funny.jpg",
+          "cohort":"kobi",
+          "skills":[  
+            "ux"
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.linkedin.com/pub/brittany-l-cowan/b9/408/27a",
+          "twitter":"frontendflaneur",
+          "available":["fulltime"],
+          "location":[  
+            "Pittsburgh, PA"
+          ],
+          "bio":"Brittany is a former Recruiter turned UX professional. When she isn't wireframing, you can catch her with her feet up, cracking open a cold one."
+        }
+      ]
+    },
+    {  
+      "year":"2015",
+      "cohort":"jet",
+      "logo":"img/logos/jet.jpg",
+      "students":[  
+        {  
+          "id":"j15-KevinKuk",
+          "name":"Kevin Kuk",
+          "headshot":"img/jet/jet_kevin.jpg",
+          "headshot_funny":"img/jet/jet_kevin_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "ui",
+            "dev"
+          ],
+          "skill3":"dev",
+          "portfolio":"http://www.N/A",
+          "linkedin":"http://www.linkedin.com/in/kvnkuk",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Kevin is a UX focused UI designer with a graphic design background. He loves coffee, comics (batman in specific), and hiphop."
+        },
+        {  
+          "id":"j15-AbrahamBan",
+          "name":"Abraham Ban",
+          "headshot":"img/jet/jet_abe.jpg",
+          "headshot_funny":"img/jet/jet_abe_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ui",
+            "dev"
+          ],
+          "portfolio":"http://www.N/A",
+          "linkedin":"http://www.linkedin.com/in/abrahamban",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Abraham is a UI Designer and Front-End Developer with a graphic design background. He loves mind-bending movies (Momento), writing scripts, and eating... but not too much though."
+        },
+        {  
+          "id":"j15-IsaacSeo",
+          "name":"Isaac Seo",
+          "headshot":"img/jet/jet_isaac.jpg",
+          "headshot_funny":"img/jet/jet_isaac_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "dev"
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.linkedin.com/in/iseo12",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Champaign, IL"
+          ],
+          "bio":"Isaac is a wild party animal, chatting it up every moment he gets. Don't let his boisterous lifestyle fool you, he's one of the hardest workers of the land."
+        },
+        {  
+          "id":"j15-ArielleSaporta",
+          "name":"Arielle Saporta",
+          "headshot":"img/jet/jet_arielle.jpg",
+          "headshot_funny":"img/jet/jet_arielle_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "dev"
+          ],
+          "portfolio":"http://www.N/A",
+          "linkedin":"N/A",
+          "twitter":"asap_6",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Arielle is an award winning parkour player, mixing beats and creating beautiful chemical works of art used by the finest of neuroscientists."
+        },
+        {  
+          "id":"j15-KarenUcol",
+          "name":"Karen Ucol",
+          "headshot":"img/jet/jet_karen.jpg",
+          "headshot_funny":"img/jet/jet_karen_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.karenucol.com",
+          "linkedin":"http://www.linkedin.com/in/karenucol",
+          "twitter":"karenucol",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL",
+            "Seattle, WA"
+          ],
+          "bio":"Karen is a sparkle filled being, derived from sea salt and mermaid magic."
+        },
+        {  
+          "id":"j15-CaitlynChildress",
+          "name":"Caitlyn Childress",
+          "headshot":"img/jet/jet_caitlyn.jpg",
+          "headshot_funny":"img/jet/jet_caitlyn_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ui",
+            "dev"
+          ],
+          "portfolio":"http://www.caitlynchildress.com",
+          "linkedin":"http://www.linkedin.com/pub/caitlyn-childress/3b/907/775",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Caitlyn is a UI designer and Front End Dev. She enjoys strolling through the Art Institute and hanging out with personality filled dogs."
+        },
+        {  
+          "id":"j15-RebeccaHarris",
+          "name":"Rebecca Harris",
+          "headshot":"img/jet/jet_rebecca.jpg",
+          "headshot_funny":"img/jet/jet_rebecca_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ui",
+            "ux"
+          ],
+          "portfolio":"http://www.rebeccadianeharris.com",
+          "linkedin":"http://www.linkedin.com/pub/rebecca-harris/b0/b36/492",
+          "twitter":"bec_bec1",
+          "available":["fulltime"],
+          "location":[  
+            "South Jordan, UT"
+          ],
+          "bio":"Rebecca is a UX/UI designer who has a curious mind, infategable optimism, and a love of strange foods."
+        },
+        {  
+          "id":"j15-KailyGillan",
+          "name":"Kaily Gillan",
+          "headshot":"img/jet/jet_kaily_gillan.jpg",
+          "headshot_funny":"img/jet/jet_kaily_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux"
+          ],
+          "portfolio":"http://www.kailygillan.com",
+          "linkedin":"http://www.linkedin.com/pub/kaily-gillan/7b/b80/b16",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Kaily is an interaction designer with a deep understanding of UI and HTML/CSS. She loves climbing, corgis, and fish tacos."
+        },
+        {  
+          "id":"j15-JiSuHiatt",
+          "name":"Ji Su Hiatt",
+          "headshot":"img/jet/jet_jisu.jpg",
+          "headshot_funny":"img/jet/jet_jisu_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "dev"
+          ],
+          "portfolio":"http://www.jisuhiatt.com",
+          "linkedin":"http://www.linkedin.com/in/parkjisu",
+          "twitter":"jisuhiatt",
+          "available":["fulltime"],
+          "location":[  
+            "Richmond, VA"
+          ],
+          "bio":"Ji Su is a UX designer and front-end developer who brings enthusiasm and ambition to every project she works on.  She loves all things design, tech, food, hiking, and science, and could probably spend all day in an art supply store or eating fruit."
+        },
+        {  
+          "id":"j15-StephanieMartinez",
+          "name":"Stephanie Martinez",
+          "headshot":"img/jet/jet_stephanie.jpg",
+          "headshot_funny":"img/jet/jet_stephanie_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.N/A",
+          "linkedin":"http://www.linkedin.com/pub/stephanie-martinez/50/550/a6a",
+          "twitter":"smartez87",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Stephanie is a UX designer who dabbles in UI. She has a love and respect for language, culture and travel that allows her to bring a fresh perspective to her design work. "
+        },
+        {  
+          "id":"j15-CatherineWood",
+          "name":"Catherine Wood",
+          "headshot":"img/jet/jet_catherine.jpg",
+          "headshot_funny":"img/jet/jet_catherine_fun.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux"
+          ],
+          "portfolio":"http://www.uxcatherine.com",
+          "linkedin":"http://www.https://ca.linkedin.com/in/uxcatherine",
+          "twitter":"uxcatherine",
+          "available":["fulltime"],
+          "location":[  
+            "Toronto, ON"
+          ],
+          "bio":""
+        },
+        {  
+          "id":"j15-RachelRiordan",
+          "name":"Rachel Riordan",
+          "headshot":"img/jet/jet_rachel.jpg",
+          "headshot_funny":"img/jet/jet_rachel_funny.jpg",
+          "cohort":"jet",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.N/A",
+          "linkedin":"N/A",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Rachel loves scruffy older men with drive, anyone with a side smirk, and chubby ladies that use sporks."
+        }
+      ]
+    },
+    {  
+      "year":"2015",
+      "cohort":"ivory",
+      "logo":"img/logos/ivory.jpg",
+      "students":[  
+        {  
+          "id":"i15-AaronFaucher",
+          "name":"Aaron Faucher",
+          "headshot":"img/ivory/ivory_aaron.jpg",
+          "headshot_funny":"img/ivory/ivory_aaron_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
 
-	{ 
-			"year" : "2015",
-			"cohort" : "kobi",
-			"logo" : "img/logos/kobi.jpg",
-			"students" : [ 
-				{
-					"id" : "k15-JimmyYoon",
- 					"name" : "Jimmy Yoon",
-					"headshot" : "img/kobi/jimmy.jpg",
-					"headshot_funny" : "img/kobi/jimmy-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui", "dev"],
-					"portfolio" : "jjyoon.com",
-					"linkedin" : "N/A",
-					"twitter" : "N/A",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Jimmy is a UI designer with supporting skills in UX and front-end development."
-				},
-				{
-					"id" : "k15-ShreyaIndukuri",
-					"name" : "Shreya Indukuri",
-					"headshot" : "img/kobi/shreya.jpg",
-					"headshot_funny" : "img/kobi/shreya-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui", "dev"],
-					"portfolio" : "behance.net/shreyai",
-					"linkedin" : "linkedin.com/pub/shreya-indukuri/20/668/a19",
-					"twitter" : "N/A",
-					"available" : "fulltime",
-					"location" : ["Hanover, NH"],
-					"bio" : "Shreya is a rising senior at Dartmouth College interested in UI, UX, and interaction design."
-				},
-				{
-					"id" : "k15-DaveLitterio",
-					"name" : "Dave Litterio",
-					"headshot" : "img/kobi/dave.jpg",
-					"headshot_funny" : "img/kobi/dave-funny.jpg",
-					"cohort" : "kobi",
- 					"skills" : ["ui", "ux"],
-					"portfolio" : "litteriodigital.com",
-					"linkedin" : "N/A",
-					"twitter" : "N/A",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Dave is a former photographer, now UI designer with a UX mind. He loves Foo Fighters and has wealth of knowledge in Seinfeld quotes and trivia. Don't start quoting Dumb & Dumber though because he'll probably finish the whole script..."
-				},
-				{
-					"id" : "k15-NelsonChang",
-					"name" : "Nelson Chang",
-					"headshot" : "img/kobi/nelson.jpg",
-					"headshot_funny" : "img/kobi/nelson-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["dev", "ui"],
-					"portfolio" : "iamnelson.me",
-					"linkedin" : "linkedin.com/in/nelsonschang",
-					"twitter" : "neldotpng",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Nelson is a front end developer with a strong interest in user interface design. He is addicted to music and might die if he goes 24 hours without listening to anything."
-				},
-				{
-					"id" : "k15-BrandonFujii",
-					"name" : "Brandon Fujii",
-					"headshot" : "img/kobi/brandon.jpg",
-					"headshot_funny" : "img/kobi/brandon-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["dev", "ui"],
-					"portfolio" : "brandonfujii.com",
-					"linkedin" : "linkedin.com/in/bfujii",
-					"twitter" : "brandonfujii",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL", "San Francisco, CA"],
-					"bio" : "Brandon is a front-end developer with experience in user interface design. He is studying computer science as a second-year at Northwestern University."
-				},
-				{
-					"id" : "k15-NathanLlewellyn",
-					"name" : "Nathan Llewellyn",
-					"headshot" : "img/kobi/nate.jpg",
-					"headshot_funny" : "img/kobi/nate-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux", "ui"],
-					"portfolio" : "natedoesux.design",
-					"linkedin" : "linkedin.com/in/nathanllewellyn",
-					"twitter" : "nathan_lion",
-					"available" : "fulltime",
-					"location" : ["Provo, UT"],
-					"bio" : "Nathan is a UX designer with a special interest in interaction design. When he's not geeking out about technology he likes to cycle, hike, build furniture, and listen to great music."
-				},
-				{
-					"id" : "k15-SucyMunoz",
-					"name" : "Sucy Munoz",
-					"headshot" : "img/kobi/sucy.jpg",
-					"headshot_funny" : "img/kobi/sucy-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui", "ux"],
-					"portfolio" : "",
-					"linkedin" : "linkedin.com/pub/sucy-munoz/b9/671/457",
-					"twitter" : "sucy524",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Sucy is a UX/UI designer with a graphic design background. She loves reading books, and quoting random movie quotes that no one gets. 'It's 106 miles to Chicago, we got a full tank of gas, half a pack of cigarettes, it's dark... and we're wearing sunglasses.'"
-				},
-				{
-					"id" : "k15-DannyLuber",
-					"name" : "Danny Luber",
-					"headshot" : "img/kobi/danny.jpg",
-					"headshot_funny" : "img/kobi/danny-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux", "ui"],
-					"portfolio" : "dannyluber.com",
-					"linkedin" : "linkedin.com/in/dannyluber",
-					"twitter" : "dannyluber",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Danny is an Interaction Designer with a background in business management and marketing."
-				},
-				{
-					"id" : "k15-JennaReed",
-					"name" : "Jenna Reed",
-					"headshot" : "img/kobi/jenna.jpg",
-					"headshot_funny" : "img/kobi/jenna-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui"],
-					"portfolio" : "",
-					"linkedin" : "linkedin.com/pub/jenna-reed/90/a22/440",
-					"twitter" : "JennaReedDesign",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Jenna is an amiable UI designer with a background in web design, development, and graphic design.  This music aficionado enjoys a proper mosh pit, psychological driven movies, and the opportunity to enjoy a patio beer with old and new friends alike."
-				},
-				{
-					"id" : "k15-AdamSenese",
-					"name" : "Adam Senese",
-					"headshot" : "img/kobi/adam.jpg",
-					"headshot_funny" : "img/kobi/adam-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui"],
-					"portfolio" : "senese.io",
-					"linkedin" : "linkedin.com/pub/adam-senese/47/bb0/782",
-					"twitter" : "Adam_Sensei",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL"],
-					"bio" : "Adam is a Designer/Developer with a love for clean and intuitive user interfaces."
-				},
-				{
-					"id" : "k15-CedricMayer",
-					"name" : "Cedric Mayer",
-					"headshot" : "img/kobi/cedric.jpg",
-					"headshot_funny" : "img/kobi/cedric-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ui", "dev"],
-					"portfolio" : "cedricmayer.com",
-					"linkedin" : "linkedin.com/pub/james-cedric-mayer/48/440/bb1",
-					"twitter" : "cedricmayer1",
-					"available" : "fulltime",
-					"location" : ["New York, NY"],
-					"bio" : "Cedric is a part-time hardware engineer, part-time software engineer, part-time interaction designer and part-time ping pong master with a passion for building complex apps packaged into intuitive interfaces."
-				},
-				{
-					"id" : "k15-CeciliaRichey",
-					"name" : "Cecilia Richey",
-					"headshot" : "img/kobi/cecilia.jpg",
-					"headshot_funny" : "img/kobi/cecilia-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux", "ui", "dev"],
-					"portfolio" : "ceciliarichey.com",
-					"linkedin" : "linkedin.com/in/ceciliarichey",
-					"twitter" : "ceciliarichey",
-					"available" : "parttime",
-					"location" : ["Denver, CO"],
-					"bio" : ""
-				},
-				{
-					"id" : "k15-SarahYoung",
-					"name" : "Sarah Young",
-					"headshot" : "img/kobi/sarah.jpg",
-					"headshot_funny" :  "img/kobi/sarah-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux" , "ui"],
-					"portfolio" : "uxsarah.com",
-					"linkedin" : "linkedin.com/in/sarahyoung26",
-					"twitter" : "ux_sarah",
-					"available" : "fulltime",
-					"location" : ["Kailua, HI"],
-					"bio" : "Sarah is a UX designer with a background in education. Her love for culture and travel brought her to South Korea, where she lived for 3 years. If you witness Sarah turning down a good glass of malbec, take a picture, because that's something that just doesn't happen."
-				},
-				{
-					"id" : "k15-SimonKwan",
-					"name" : "Simon Kwan",
-					"headshot" : "img/kobi/simon.jpg",
-					"headshot_funny" : "img/kobi/simon-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux", "ui"],
-					"portfolio" : "simonkkwan.com",
-					"linkedin" : "linkedin.com/in/simonkkwan",
-					"twitter" : "simonkkwan",
-					"available" : "fulltime",
-					"location" : ["San Francisco, CA"],
-					"bio" : "Simon loves pretty, simple things. Runs on dunkin'."
-				},
-				{
-					"id" : "k15-WesMartin",
-					"name" : "Wes Martin",
-					"headshot" : "img/kobi/wes.jpg",
-					"headshot_funny" : "img/kobi/wes-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux", "ui"],
-					"portfolio" : "westechsun.com/",
-					"linkedin" : "linkedin.com/in/westechsun",
-					"twitter" : "westechsun",
-					"available" : "fulltime",
-					"location" : ["Chicago, IL", "Fort Worth, TX"],
-					"bio" : "Wes is a 10-year creative services professional with 1,500+ multimedia projects under his belt. His experience includes UX / UI design, product design, project management, creative direction, copywriting, branding, talent management, game development, and client services."
-				},
-				{
-					"id" : "k15-BrittanyCowan",
-					"name" : "Brittany Cowan",
-					"headshot" : "img/kobi/brittany.jpg",
-					"headshot_funny" : "img/kobi/brittany-funny.jpg",
-					"cohort" : "kobi",
-					"skills" : ["ux"],
-					"portfolio" : "",
-					"linkedin" : "linkedin.com/pub/brittany-l-cowan/b9/408/27a",
-					"twitter" : "frontendflaneur",
-					"available" : "fulltime",
-					"location" : ["Pittsburgh, PA"],
-					"bio" : "Brittany is a former Recruiter turned UX professional. When she isn't wireframing, you can catch her with her feet up, cracking open a cold one."
-				}
-			]
-	},
-	{ 
-			"year" : "2015",
-			"cohort" : "jet",
-			"logo" : "img/logos/jet.jpg",
-			"students" : [
-					{ 
-						"id" : "j15-KevinKuk",
-						"name" : "Kevin Kuk",
-						"headshot" : "img/jet/jet_kevin.jpg",
-						"headshot_funny" : "img/jet/jet_kevin_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux", "ui", "dev"],
-						"portfolio": "N/A",
-						"linkedin" : "linkedin.com/in/kvnkuk",
-						"twitter" : "N/A",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Kevin is a UX focused UI designer with a graphic design background. He loves coffee, comics (batman in specific), and hiphop."
-					},
-					{
-						"id" : "j15-AbrahamBan",
-						"name" : "Abraham Ban",
-						"headshot" : "img/jet/jet_abe.jpg",
-						"headshot_funny" : "img/jet/jet_abe_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ui", "dev"],
-						"portfolio" : "N/A",
-						"linkedin" : "linkedin.com/in/abrahamban",
-						"twitter" : "N/A",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Abraham is a UI Designer and Front-End Developer with a graphic design background. He loves mind-bending movies (Momento), writing scripts, and eating... but not too much though."
-					},
-					{
-						"id" : "j15-IsaacSeo",
-						"name" : "Isaac Seo",
-						"headshot" : "img/jet/jet_isaac.jpg",
-						"headshot_funny" : "img/jet/jet_isaac_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["dev"],
-						"portfolio" : "",
-						"linkedin" : "linkedin.com/in/iseo12",
-						"twitter": "N/A",
-						"available" : "fulltime",
-						"location" : ["Champaign, IL"],
-						"bio" : "Isaac is a wild party animal, chatting it up every moment he gets. Don't let his boisterous lifestyle fool you, he's one of the hardest workers of the land."
-					},
-					{
-						"id" : "j15-ArielleSaporta",
-						"name" : "Arielle Saporta",
-						"headshot" : "img/jet/jet_arielle.jpg",
-						"headshot_funny" : "img/jet/jet_arielle_funny.jpg",
-						"cohort" : "jet",
- 						"skills" : ["ux", "dev"],
-						"portfolio" : "N/A",
-						"linkedin" : "N/A",
-						"twitter" : "asap_6",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Arielle is an award winning parkour player, mixing beats and creating beautiful chemical works of art used by the finest of neuroscientists."
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
 
-					},
-					{
-						"id" : "j15-KarenUcol",
-						"name" : "Karen Ucol",
-						"headshot" : "img/jet/jet_karen.jpg",
-						"headshot_funny" : "img/jet/jet_karen_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux", "ui"],
-						"portfolio" : "karenucol.com",
-						"linkedin" : "linkedin.com/in/karenucol",
-						"twitter" : "karenucol",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL", "Seattle, WA"],
-						"bio" : "Karen is a sparkle filled being, derived from sea salt and mermaid magic."
-					},
-					{
-						"id" : "j15-CaitlynChildress",
-						"name" : "Caitlyn Childress",
-						"headshot" : "img/jet/jet_caitlyn.jpg",
-						"headshot_funny" : "img/jet/jet_caitlyn_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ui", "dev"],
-						"portfolio" : "caitlynchildress.com",
-						"linkedin" : "linkedin.com/pub/caitlyn-childress/3b/907/775",
-						"twitter" : "N/A",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Caitlyn is a UI designer and Front End Dev. She enjoys strolling through the Art Institute and hanging out with personality filled dogs."
-					},
-					{
-						"id" : "j15-RebeccaHarris",
-						"name" : "Rebecca Harris",
-						"headshot" : "img/jet/jet_rebecca.jpg",
-						"headshot_funny" : "img/jet/jet_rebecca_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ui", "ux"],
-						"portfolio" : "rebeccadianeharris.com",
-						"linkedin" : "linkedin.com/pub/rebecca-harris/b0/b36/492",
-						"twitter" : "bec_bec1",
-						"available" : "fulltime",
-						"location" : ["South Jordan, UT"],
-						"bio" : "Rebecca is a UX/UI designer who has a curious mind, infategable optimism, and a love of strange foods."
-					},
-					{
-						"id" : "j15-KailyGillan",
-						"name" : "Kaily Gillan",
-						"headshot" : "img/jet/jet_kaily_gillan.jpg",
-						"headshot_funny" : "img/jet/jet_kaily_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux"],
-						"portfolio" : "kailygillan.com",
-						"linkedin" : "linkedin.com/pub/kaily-gillan/7b/b80/b16",
-						"twitter" : "N/A",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Kaily is an interaction designer with a deep understanding of UI and HTML/CSS. She loves climbing, corgis, and fish tacos."
-					},
-					{
-						"id" : "j15-JiSuHiatt",
-						"name" : "Ji Su Hiatt",
-						"headshot" : "img/jet/jet_jisu.jpg",
-						"headshot_funny" : "img/jet/jet_jisu_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux", "dev"],
-						"portfolio" : "jisuhiatt.com",
-						"linkedin" : "linkedin.com/in/parkjisu",
-						"twitter" : "jisuhiatt",
-						"available" : "fulltime",
-						"location" : ["Richmond, VA"],
-						"bio" : "Ji Su is a UX designer and front-end developer who brings enthusiasm and ambition to every project she works on.  She loves all things design, tech, food, hiking, and science, and could probably spend all day in an art supply store or eating fruit."
-					},
-					{
-						"id" : "j15-StephanieMartinez",
-						"name" : "Stephanie Martinez",
-						"headshot" : "img/jet/jet_stephanie.jpg",
-						"headshot_funny" : "img/jet/jet_stephanie_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux", "ui"],
-						"portfolio" : "N/A",
-						"linkedin" : "linkedin.com/pub/stephanie-martinez/50/550/a6a",
-						"twitter" : "smartez87",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Stephanie is a UX designer who dabbles in UI. She has a love and respect for language, culture and travel that allows her to bring a fresh perspective to her design work. "
-					},
-					{
-						"id" : "j15-CatherineWood",
-						"name" : "Catherine Wood",
-						"headshot" : "img/jet/jet_catherine.jpg",
-						"headshot_funny" : "img/jet/jet_catherine_fun.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux"],
-						"portfolio" : "uxcatherine.com",
-						"linkedin" : "https://ca.linkedin.com/in/uxcatherine",
-						"twitter" : "uxcatherine",
-						"available" : "fulltime",
-						"location" : ["Toronto, ON"],
-						"bio" : ""
-					},
-					{
-						"id" : "j15-RachelRiordan",
-						"name" : "Rachel Riordan",
-						"headshot" : "img/jet/jet_rachel.jpg",
-						"headshot_funny" : "img/jet/jet_rachel_funny.jpg",
-						"cohort" : "jet",
-						"skills" : ["ux", "ui"],
-						"portfolio" : "N/A",
-						"linkedin" : "N/A",
-						"twitter" : "N/A",
-						"available" : "fulltime",
-						"location" : ["Chicago, IL"],
-						"bio" : "Rachel loves scruffy older men with drive, anyone with a side smirk, and chubby ladies that use sporks."
-					}
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-ByoncaHonaker",
+          "name":"Byonca Honaker",
+          "headshot":"img/ivory/ivory_byonca.jpg",
+          "headshot_funny":"img/ivory/ivory_byonca_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
 
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
 
-				]
-	}
-]
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-CourtneyLeonard",
+          "name":"Courtney Leonard",
+          "headshot":"img/ivory/ivory_courtney.jpg",
+          "headshot_funny":"img/ivory/ivory_courtney_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
 
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-LanNguyen",
+          "name":"Lan Nguyen",
+          "headshot":"img/ivory/ivory_lan.jpg",
+          "headshot_funny":"img/ivory/ivory_lan_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-MannyDominguez",
+          "name":"Manny Dominguez",
+          "headshot":"img/ivory/ivory_manny.jpg",
+          "headshot_funny":"img/ivory/ivory_manny_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-MaryLee",
+          "name":"Mary Lee",
+          "headshot":"img/ivory/ivory_mary.jpg",
+          "headshot_funny":"img/ivory/ivory_mary_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-MeganMueller",
+          "name":"Megan Mueller",
+          "headshot":"img/ivory/ivory_megan.jpg",
+          "headshot_funny":"img/ivory/ivory_megan_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-MelodyChou",
+          "name":"Melody Chou",
+          "headshot":"img/ivory/ivory_melody.jpg",
+          "headshot_funny":"img/ivory/ivory_melody_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-PaigeSaez",
+          "name":"Paige Saez",
+          "headshot":"img/ivory/ivory_paige.jpg",
+          "headshot_funny":"img/ivory/ivory_paige_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-RyanZawacki",
+          "name":"Ryan Zawacki",
+          "headshot":"img/ivory/ivory_ryan.jpg",
+          "headshot_funny":"img/ivory/ivory_ryan_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"i15-SarahFrazier",
+          "name":"Sarah Frazier",
+          "headshot":"img/ivory/ivory_sarah.jpg",
+          "headshot_funny":"img/ivory/ivory_sarah_funny.jpg",
+          "cohort":"ivory",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        }
+      ]
+    },
+    {  
+      "year":"2015",
+      "cohort":"hazel",
+      "logo":"img/logos/hazel.jpg",
+      "students":[  
+        {  
+          "id":"h15-SaraLegg",
+          "name":"Sara Legg",
+          "headshot":"img/hazel/hazel_sara.jpg",
+          "headshot_funny":"img/hazel/hazel_sara_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.saralegg.com",
+          "linkedin":"http://www.linkedin.com/in/saralegg",
+          "twitter":"h0neyspider",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Sara is a UX designer and ethnographer who uncovers insights with a co-creative and empathic approach. She's interested in understanding how meaning is created and reproduced in digital and service experiences in order to drive innovation."
+        },
+        {  
+          "id":"h15-EricShivvers",
+          "name":"Eric Shivvers",
+          "headshot":"img/hazel/hazel_eric.jpg",
+          "headshot_funny":"img/hazel/hazel_eric_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+            "ui"
+          ],
+          "portfolio":"http://www.shivvers.design",
+          "linkedin":"N/A",
+          "twitter":"N/A",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":"Eric Shivvers is a digital designer who is currently working at Blue Chip Marketing Worldwide."
+        },
+        {  
+          "id":"h15-ZoeSlutzky",
+          "name":"Zoe Slutzky",
+          "headshot":"img/hazel/hazel_zoe.jpg",
+          "headshot_funny":"img/hazel/hazel_zoe_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+            "ui"
+          ],
+          "portfolio":"http://www.zoeslutzky.com",
+          "linkedin":"http://www.linkedin.com/in/zoeslutzky",
+          "twitter":"zoiitsia",
+          "available":["fulltime"],
+          "location":[  
+            "Chicago, IL"
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-AmyTon",
+          "name":"Amy Ton",
+          "headshot":"img/hazel/hazel_amy.jpg",
+          "headshot_funny":"img/hazel/hazel_amy_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+            "ux",
+            "ui"
+          ],
+          "portfolio":"http://www.amyton.io",
+          "linkedin":"http://www.linkedin.com/in/amyton",
+          "twitter":"heyamyton",
+          "available":["fulltime"],
+          "location":[  
+            "Los Angeles, CA"
+          ],
+          "bio":"Sara is a UX designer and ethnographer who uncovers insights with a co-creative and empathic approach. She's interested in understanding how meaning is created and reproduced in digital and service experiences in order to drive innovation."
+        },
+        {  
+          "id":"h15-AmandaSamy",
+          "name":"Amanda Samy",
+          "headshot":"img/hazel/hazel_amanda.jpg",
+          "headshot_funny":"img/hazel/hazel_amanda_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-BrianVogel",
+          "name":"Brian Vogel",
+          "headshot":"img/hazel/hazel_brian.jpg",
+          "headshot_funny":"img/hazel/hazel_brian_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-CathyLynk",
+          "name":"Cathy Lynk",
+          "headshot":"img/hazel/hazel_cathy.jpg",
+          "headshot_funny":"img/hazel/hazel_cathy_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-CourtneyBogus",
+          "name":"Courtney Bogus",
+          "headshot":"img/hazel/hazel_courtney.jpg",
+          "headshot_funny":"img/hazel/hazel_courtney_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-EvaSimon",
+          "name":"Eva Simon",
+          "headshot":"img/hazel/hazel_eva.jpg",
+          "headshot_funny":"img/hazel/hazel_eva_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-LindsayYuen",
+          "name":"Lindsay Yuen",
+          "headshot":"img/hazel/hazel_lindsay.jpg",
+          "headshot_funny":"img/hazel/hazel_lindsay_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"h15-MaryBethStanton",
+          "name":"Mary Beth Stanton",
+          "headshot":"img/hazel/hazel_mb.jpg",
+          "headshot_funny":"img/hazel/hazel_mb_funny.jpg",
+          "cohort":"hazel",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        }
+      ]
+    },
+    {  
+      "year":"2015",
+      "cohort":"gold",
+      "logo":"img/logos/gold.jpg",
+      "students":[  
+        {  
+          "id":"g15-AdamBlack",
+          "name":"Adam Black",
+          "headshot":"img/gold/gold_adam.jpg",
+          "headshot_funny":"img/gold/gold_adam_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-AlvaroMoscoso",
+          "name":"Alvaro Moscoso",
+          "headshot":"img/gold/gold_alvaro.jpg",
+          "headshot_funny":"img/gold/gold_alvaro_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-CharlesHu",
+          "name":"Charles Hu",
+          "headshot":"img/gold/gold_charles.jpg",
+          "headshot_funny":"img/gold/gold_charles_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-ErinChartier",
+          "name":"Erin Chartier",
+          "headshot":"img/gold/gold_erin.jpg",
+          "headshot_funny":"img/gold/gold_erin_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-jenelleHuddleston",
+          "name":"Jenelle Huddleston",
+          "headshot":"img/gold/gold_jenelle.jpg",
+          "headshot_funny":"img/gold/gold_jenelle_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-MaggieHunsaker",
+          "name":"Maggie Hunsaker",
+          "headshot":"img/gold/gold_maggie.jpg",
+          "headshot_funny":"img/gold/gold_maggie_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-NeelyKartha",
+          "name":"Neely Kartha",
+          "headshot":"img/gold/gold_neely.jpg",
+          "headshot_funny":"img/gold/gold_neely_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        },
+        {  
+          "id":"g15-SarahJerger",
+          "name":"Sarah Jerger",
+          "headshot":"img/gold/gold_sarah.jpg",
+          "headshot_funny":"img/gold/gold_sarah_funny.jpg",
+          "cohort":"gold",
+          "skills":[  
+
+          ],
+          "portfolio":"N/A",
+          "linkedin":"http://www.",
+          "twitter":"",
+          "available":["fulltime"],
+          "location":[  
+
+          ],
+          "bio":""
+        }
+      ]
+    }
+  ]
 }
