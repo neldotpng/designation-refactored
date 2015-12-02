@@ -1,4 +1,15 @@
 /*
+** Header Button
+*/
+
+$(".header-button").on("click", function() {
+	var $doc = $("html,body");
+	var $scrollTo = $('.sidebar');
+
+	$doc.animate({scrollTop: $scrollTo.offset().top - $doc.offset().top - 60}, 400);
+});
+
+/*
 ** Dynamic Header
 ** Shuffle, Calc, Header functions
 */

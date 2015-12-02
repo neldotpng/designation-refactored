@@ -1,28 +1,68 @@
 * {
   box-sizing: border-box; }
 
-header {
+li {
+  list-style: none; }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #eee; }
+  .loader .loader-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.header_right_side a{ font-weight: 600; }
+
+.no-students {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  font-size: 22px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+header#alumni-image-tiles {
+  padding-top: 60px;
   position: relative;
   height: 100vh;
   overflow: hidden; }
-  header .header-button {
+  header#alumni-image-tiles .header-button {
     background-color: #E2263D;
-    height: 66px;
-    width: 66px;
-    margin: 0 auto;
-    margin-top: 15%;
+    height: 65px;
+    width: 65px;
     border-radius: 50px;
     text-align: center;
-    position: relative;
-    z-index: 10;
+    position: absolute;
+    z-index: 130;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
     cursor: pointer;
     cursor: hand; }
-  header .header-button:after {
+  header#alumni-image-tiles .header-button::after {
     position: absolute;
     content: '';
-    height: 66px;
-    width: 66px;
-    border: 1px solid #E2263D;
+    height: 65px;
+    width: 65px;
+    border: 3.5px solid #E2263D;
     top: 0;
     left: 0;
     border-radius: 50px;
@@ -30,12 +70,12 @@ header {
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out; }
-  header .header-button:hover:after {
-    height: 80px;
-    width: 80px;
-    top: -7px;
-    left: -7px; }
-  header .header-button .fa {
+  header#alumni-image-tiles .header-button:hover::after {
+    height: 85px;
+    width: 85px;
+    top: -10px;
+    left: -10px; }
+  header#alumni-image-tiles .header-button .fa {
     color: #fafafa;
     position: relative;
     top: 50%;
@@ -45,10 +85,14 @@ header {
     transform: translateY(-50%);
     font-size: 28px;
     font-weight: 900; }
-  header .top-bar {
+  header#alumni-image-tiles .top-bar {
     background-color: #170105;
-    height: 60px; }
-    header .top-bar a {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    top: 0; }
+    header#alumni-image-tiles .top-bar a {
       display: inline-block;
       margin-left: 15px;
       width: 219px;
@@ -59,7 +103,7 @@ header {
       transform: translate(0, 50%); }
       header .top-bar a img {
         width: 100%; }
-  header h1 {
+  header#alumni-image-tiles h1 {
     position: absolute;
     z-index: 250;
     top: 50%;
@@ -75,30 +119,25 @@ header {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  header .dynamic {
+  header#alumni-image-tiles .dynamic {
     width: 100%;
     background-color: #1e1e1e; }
-    header .dynamic img {
-      width: 20%;
+    header#alumni-image-tiles .dynamic img {
+      width: 25%;
       float: left; }
-  header .dynamic:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.3); }
 
 .sidebar {
   display: block;
   font-family: "Futura PT", Arial, sans-serif;
+  font-weight: 400;
   color: #FEFBFC;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
   width: 100%;
   padding: 10px 0;
   margin-top: 20px;
+  top: 40px;
+  float: left;
   text-transform: uppercase; }
   .sidebar input {
     font-size: 18px;
@@ -107,8 +146,8 @@ header {
     color: #170105;
     background-color: #efefef;
     width: 25%;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     letter-spacing: 1px;
     padding: 0 15px;
     vertical-align: middle;
@@ -118,6 +157,7 @@ header {
   .sidebar .filter-label {
     display: none; }
   .sidebar .filters {
+    margin: 0;
     width: 70%;
     float: left;
     margin-left: 0.5%; }
@@ -130,36 +170,44 @@ header {
         display: block;
         position: relative;
         width: 100%;
-        height: 35px;
+        height: 40px;
         background-color: #333;
         border-radius: 5px;
-        line-height: 35px;
+        line-height: 40px;
         vertical-align: middle;
         letter-spacing: 1px;
         cursor: pointer;
         cursor: hand;
-        -webkit-transition: border-radius 0.2s ease-in-out;
-        -moz-transition: border-radius 0.2s ease-in-out;
-        -o-transition: border-radius 0.2s ease-in-out;
-        transition: border-radius 0.2s ease-in-out; }
-      .sidebar .filters .filter div {
-        position: absolute;
-        right: 7.5%;
-        top: 15px;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-top: 7px solid #FEFBFC; }
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        .sidebar .filters .filter span .arrow-down {
+          position: absolute;
+          right: 7.5%;
+          top: 15px;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 7px solid #FEFBFC;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
       .sidebar .filters .filter .filter-items {
-        display: none;
         background-color: #eee;
         position: absolute;
-        top: 35px;
+        top: 40px;
+        margin-left: 0;
         width: 100%;
-        max-height: 300px;
+        max-height: 0;
         overflow: auto;
-        z-index: 9999;
+        z-index: 99999;
         border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px; }
+        border-bottom-right-radius: 5px;
+        -webkit-transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        -moz-transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        -o-transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96); }
         .sidebar .filters .filter .filter-items .filter-item {
           position: relative;
           background-color: #eee;
@@ -183,6 +231,7 @@ header {
           .sidebar .filters .filter .filter-items .filter-item label:before {
             content: "";
             position: absolute;
+            top: 14px;
             left: 5%;
             bottom: 8px;
             display: inline-block;
@@ -215,55 +264,65 @@ header {
             text-transform: none;
             cursor: pointer;
             cursor: hand; }
+      .sidebar .filters .filter .active {
+        max-height: 300px; }
       .sidebar .filters .filter .active-filter {
         background-color: #000;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         border-top-color: #FEFBFC; }
+        .sidebar .filters .filter .active-filter .arrow-down {
+          -webkit-transform: rotateX(180deg);
+          -moz-transform: rotateX(180deg);
+          -o-transform: rotateX(180deg);
+          transform: rotateX(180deg); }
 
 main {
-  font-family: "Futura PT", Arial, sans-serif;
-  min-height: 50vh; }
-  main section {
+  min-height: 100vh; }
+  main .students {
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 105px;
     position: relative;
     width: 85%;
-    background-color: #fff; }
-    main section .kobi-cohort .card:after {
+    max-width: 1200px;
+    background-color: #fefbfc; }
+    main .students .magenta-cohort .card::after {
+      background: rgba(192, 44, 164, 0.6); }
+    main .students .kobi-cohort .card::after {
       background: rgba(225, 147, 171, 0.6); }
-    main section .jet-cohort .card:after {
+    main .students .jet-cohort .card::after {
       background: rgba(22, 27, 33, 0.6); }
-    main section .ivory-cohort .card:after {
+    main .students .ivory-cohort .card::after {
       background: rgba(206, 195, 165, 0.6); }
-    main section .hazel-cohort .card:after {
+    main .students .hazel-cohort .card::after {
       background: rgba(163, 109, 82, 0.6); }
-    main section .gold-cohort .card:after {
+    main .students .gold-cohort .card::after {
       background: rgba(216, 191, 82, 0.6); }
-    main section .fire-cohort .card:after {
+    main .students .fire-cohort .card::after {
       background: rgba(234, 28, 28, 0.6); }
-    main section .emerald-cohort .card:after {
+    main .students .emerald-cohort .card::after {
       background: rgba(65, 214, 118, 0.6); }
-    main section .diamond-cohort .card:after {
+    main .students .diamond-cohort .card::after {
       background: rgba(137, 207, 240, 0.6); }
-    main section .celadon-cohort .card:after {
+    main .students .celadon-cohort .card::after {
       background: rgba(161, 221, 158, 0.6); }
-    main section .bronze-cohort .card:after {
+    main .students .bronze-cohort .card::after {
       background: rgba(178, 96, 56, 0.6); }
-    main section .amaranth-cohort .card:after {
+    main .students .amaranth-cohort .card::after {
       background: rgba(234, 37, 82, 0.6); }
-    main section .popup {
+    main .students .popup {
+      font-family: "Futura PT", Helvetica, sans-serif;
       opacity: 0;
-      background-color: #fff;
+      background-color: #fefbfc;
       width: 98%;
       position: absolute;
-      z-index: 1000;
+      z-index: 500;
       left: 1%;
       -webkit-transition: all 0.4s ease-in-out;
       -moz-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
-      main section .popup .img-pop {
+      main .students .popup .img-pop {
         display: block;
         position: absolute;
         opacity: 0;
@@ -273,7 +332,7 @@ main {
         -moz-transition: all 0.4s ease-in-out;
         -o-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out; }
-      main section .popup .bio-container {
+      main .students .popup .bio-container {
         color: white;
         position: absolute;
         left: 23.45%;
@@ -285,48 +344,44 @@ main {
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
-        main section .popup .bio-container .bio-content {
+        main .students .popup .bio-container .bio-content {
           opacity: 0;
           width: 100%;
           height: 100%;
+          padding-left: 5%;
           margin: 0 auto;
           -webkit-transition: all 0.3s ease-in-out;
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
-          main section .popup .bio-container .bio-content h2 {
+          main .students .popup .bio-container .bio-content h2 {
             margin: 0;
             width: 45%;
+            padding-top: 3%;
             font-size: 32px;
             text-transform: uppercase;
-            position: absolute;
-            font-weight: 700;
-            top: 10%;
-            left: 5%; }
-          main section .popup .bio-container .bio-content h3 {
+            font-weight: 700; }
+          main .students .popup .bio-container .bio-content h3 {
             margin: 0;
             width: 45%;
             font-size: 20px;
+            text-transform: none; }
+          main .students .popup .bio-container .bio-content h4 {
             position: absolute;
-            top: 25%;
-            left: 5%; }
-          main section .popup .bio-container .bio-content h4 {
+            bottom: 9.5%;
             text-transform: none;
             width: 45%;
             line-height: 28px;
-            padding-top: 5%;
             font-size: 20px;
-            position: absolute;
-            bottom: 10%;
-            left: 5%; }
-          main section .popup .bio-container .bio-content p {
+            position: absolute; }
+          main .students .popup .bio-container .bio-content p {
             width: 45%;
             position: absolute;
             line-height: 24px;
             right: 5%;
             font-size: 18px;
             bottom: 10%; }
-            main section .popup .bio-container .bio-content p a {
+            main .students .popup .bio-container .bio-content p a {
               display: inline-block;
               width: 31.33%;
               text-transform: uppercase;
@@ -340,25 +395,25 @@ main {
               -moz-transition: all 0.3s ease-in-out;
               -o-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out; }
-              main section .popup .bio-container .bio-content p a span {
+              main .students .popup .bio-container .bio-content p a span {
                 letter-spacing: 0.5px; }
-              main section .popup .bio-container .bio-content p a .fa {
+              main .students .popup .bio-container .bio-content p a .fa {
                 display: none; }
-            main section .popup .bio-container .bio-content p a:hover {
+            main .students .popup .bio-container .bio-content p a:hover {
               text-decoration: none;
               background-color: #72121E;
               border-color: #72121E; }
-          main section .popup .bio-container .bio-content .bio {
+          main .students .popup .bio-container .bio-content .bio {
             top: 10%; }
-        main section .popup .bio-container .bio-content-animate {
+        main .students .popup .bio-container .bio-content-animate {
           opacity: 1; }
-        main section .popup .bio-container span.close {
+        main .students .popup .bio-container span.close {
           position: absolute;
           color: #170105;
           text-shadow: none;
           opacity: 0.5;
           top: .25%;
-          right: 1%;
+          right: 2%;
           font-size: 48px;
           font-weight: 400;
           -webkit-transform: rotate(45deg);
@@ -369,38 +424,39 @@ main {
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
-        main section .popup .bio-container span.close:hover {
+        main .students .popup .bio-container span.close:hover {
           color: #FEFBFC;
           opacity: 1;
           -webkit-transform: rotate(315deg);
           -moz-transform: rotate(315deg);
           -o-transform: rotate(315deg);
           transform: rotate(315deg); }
-      main section .popup .img-pop-animate {
+      main .students .popup .img-pop-animate {
         opacity: 1;
         left: 0; }
-      main section .popup .bio-container-animate {
+      main .students .popup .bio-container-animate {
         width: 76.5%; }
-    main section .popup-animate {
+    main .students .popup-animate {
       opacity: 1; }
-    main section .cohort {
+    main .students .cohort {
       position: relative; }
-      main section .cohort .cohort-logo {
+      main .students .cohort .cohort-logo {
         float: left;
         width: 47.94%;
         margin: 1%; }
-        main section .cohort .cohort-logo img {
+        main .students .cohort .cohort-logo img {
           display: block;
           width: 100%; }
-      main section .cohort .nojQuery.card:before {
-        content: 'VIEW BIO';
+      main .students .cohort .nojQuery.card:before {
+        content: 'View Bio';
         position: absolute;
         font-size: 18px;
         color: #fff;
         bottom: 0;
         left: 50%;
+        letter-spacing: 0.5px;
         padding-bottom: 5px;
-        border-bottom: 2px solid #fff;
+        border-bottom: 1.5px solid #fff;
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
@@ -412,7 +468,7 @@ main {
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
-      main section .cohort .nojQuery.card:after {
+      main .students .cohort .nojQuery.card::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -426,30 +482,31 @@ main {
         -moz-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
-      main section .cohort .nojQuery.card:hover .fun-pic,
-      main section .cohort .nojQuery.card:hover:before {
+      main .students .cohort .nojQuery.card:hover .fun-pic,
+      main .students .cohort .nojQuery.card:hover:before {
         opacity: 1; }
-      main section .cohort .nojQuery.card:hover:after {
+      main .students .cohort .nojQuery.card:hover::after {
         height: 100%; }
-      main section .cohort .nojQuery.card:hover h2 {
+      main .students .cohort .nojQuery.card:hover h2 {
         bottom: 40%; }
-      main section .cohort .nojQuery.card:hover:before {
+      main .students .cohort .nojQuery.card:hover:before {
         bottom: 20%; }
-      main section .cohort .card {
+      main .students .cohort .card {
+        font-family: "Futura PT", Helvetica, sans-serif;
         position: relative;
         width: 23%;
         color: #FEFBFC;
-        background-color: #170105;
+        background-color: #fefbfc;
         margin: 1%;
         display: inline-block;
         cursor: pointer;
         cursor: hand; }
-        main section .cohort .card .disciplines {
+        main .students .cohort .card .disciplines {
           position: absolute;
           top: 5px;
           right: 5px;
           z-index: 50; }
-          main section .cohort .card .disciplines .disc {
+          main .students .cohort .card .disciplines .disc {
             font-size: 20px;
             width: 42px;
             height: 42px;
@@ -460,11 +517,11 @@ main {
             line-height: 42px;
             vertical-align: middle;
             margin-bottom: 5px; }
-        main section .cohort .card .pic {
+        main .students .cohort .card .pic {
           display: block;
           width: 100%; }
-        main section .cohort .card .fun-pic {
-          width: 100%;
+        main .students .cohort .card .fun-pic {
+          width: 99.99%;
           position: absolute;
           display: block;
           top: 0;
@@ -475,17 +532,18 @@ main {
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
-        main section .cohort .card h2 {
+        main .students .cohort .card h2 {
           position: absolute;
           bottom: 0;
           left: 0;
           width: 100%;
           height: 50px;
+          margin: 0;
           text-align: center;
           text-transform: uppercase;
           line-height: 50px;
           vertical-align: middle;
-          font-size: 22px;
+          font-size: 20px;
           letter-spacing: 0.5px;
           font-weight: 400;
           z-index: 150;
@@ -496,39 +554,43 @@ main {
 
 .fixed {
   position: fixed;
-  top: -20px;
   z-index: 9999;
   background-color: rgba(50, 50, 50, 0.8); }
 
-.clearfix:after {
+.clearfix::after {
   display: table;
   content: '';
   clear: both; }
 
 @media screen and (max-width: 1200px) {
-  main section .popup .bio-container .bio-content h2 {
+  main .students .popup .bio-container .bio-content h2 {
     font-size: 24px; }
-  main section .popup .bio-container .bio-content p {
+  main .students .popup .bio-container .bio-content p {
     line-height: 20px;
     font-size: 16px; }
-  main section .cohort .card .disciplines .disc {
+  main .students .cohort .card .disciplines .disc {
     width: 37px;
     height: 37px;
     line-height: 37px;
     font-size: 18px; }
-  main section .cohort .card h2 {
-    font-size: 20px; } }
+  main .students .cohort .card h2 {
+    font-size: 18px; } 
+  main .students .popup .bio-container .bio-content h4 {
+    font-size: 18px; } }
 @media screen and (max-width: 1100px) {
   .sidebar {
     font-size: 20px; }
     .sidebar .filters .filter .filter-items .filter-item {
       font-size: 18px; }
 
-  main section .popup .bio-container .bio-content h2 {
+  main .students .popup .bio-container .bio-content h2 {
     font-size: 22px; }
-  main section .popup .bio-container .bio-content p a {
+  main .students .popup .bio-container .bio-content p a {
     font-size: 16px; } }
 @media screen and (max-width: 1024px) {
+  header#alumni-image-tiles .dynamic img {
+    width: 33.33%; }
+
   .sidebar input.search {
     float: right;
     margin-right: 3%;
@@ -538,8 +600,8 @@ main {
     color: #FEFBFC;
     background-color: #333;
     width: 150px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 5px;
     vertical-align: middle;
     float: left;
@@ -554,10 +616,10 @@ main {
     background-color: #000; }
   .sidebar .filters {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(50, 50, 50, 0.7);
     width: 300px;
     left: -300px;
-    top: 55px;
+    top: 120px;
     z-index: 9499;
     height: 100vh;
     margin-left: 0;
@@ -592,32 +654,34 @@ main {
   .sidebar .filters-animate {
     left: 0; }
 
-  main section .popup .img-pop {
+  main .students .popup .img-pop {
     width: 32%; }
-  main section .popup .bio-container {
+  main .students .popup .bio-container {
     left: 32%; }
-    main section .popup .bio-container .bio-content p a span {
+    main .students .popup .bio-container .bio-content p a span {
       display: none; }
-    main section .popup .bio-container .bio-content p a .fa {
+    main .students .popup .bio-container .bio-content p a .fa {
       display: inline-block; }
-  main section .popup .bio-container-animate {
+  main .students .popup .bio-container-animate {
     width: 68%; }
-  main section .cohort .cohort-logo {
+  main .students .popup .bio-container .bio-content h2 {
+    padding-top: 5%; }
+  main .students .cohort .cohort-logo {
     width: 64.672%; }
-    main section .cohort .cohort-logo img {
+    main .students .cohort .cohort-logo img {
       height: 100%; }
-  main section .cohort .card {
+  main .students .cohort .card {
     width: 31.33%;
     margin: 1%; }
-    main section .cohort .card .disciplines .disc {
+    main .students .cohort .card .disciplines .disc {
       width: 40px;
       height: 40px;
       font-size: 19px;
       line-height: 40px; }
-    main section .cohort .card h2 {
-      font-size: 22px; } }
+    main .students .cohort .card h2 {
+      font-size: 20px; } }
 @media screen and (max-width: 885px) {
-  main section .popup {
+  main .students .popup {
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
     -o-transform: scaleX(0);
@@ -626,7 +690,7 @@ main {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    main section .popup .arrow-up {
+    main .students .popup .arrow-up {
       opacity: 0;
       border: solid transparent;
       border-width: 15px;
@@ -635,73 +699,75 @@ main {
       position: absolute;
       top: -5%;
       z-index: 1500; }
-    main section .popup .arrow-up-animate {
+    main .students .popup .arrow-up-animate {
       opacity: 1; }
-    main section .popup .img-pop {
+    main .students .popup .img-pop {
       opacity: 0; }
-    main section .popup .bio-container {
+    main .students .popup .bio-container {
       width: 100%;
       left: 0; }
-      main section .popup .bio-container .bio-content {
+      main .students .popup .bio-container .bio-content {
         left: 0; }
-        main section .popup .bio-container .bio-content h2 {
+        main .students .popup .bio-container .bio-content h2 {
           line-height: 24px;
-          height: 22px;
+          padding-top: 3.5%;
           text-align: left;
           background-color: #E2263D; }
-        main section .popup .bio-container .bio-content h4 {
+        main .students .popup .bio-container .bio-content h4 {
           line-height: 24px; }
-      main section .popup .bio-container span.close {
+      main .students .popup .bio-container span.close {
         opacity: 0.4; }
-  main section .popup-animate {
+  main .students .popup-animate {
     -webkit-transform: scaleX(1);
     -moz-transform: scaleX(1);
     -o-transform: scaleX(1);
     transform: scaleX(1); }
-  main section .cohort .cohort-logo {
+  main .students .cohort .cohort-logo {
     width: 64.672%; }
-    main section .cohort .cohort-logo img {
+    main .students .cohort .cohort-logo img {
       height: 100%; }
-  main section .cohort .card {
-    background-color: #fff;
+  main .students .cohort .card {
+    background-color: #fefbfc;
     width: 31.33%;
     margin: 1%;
     vertical-align: top; }
-    main section .cohort .card h2 {
-      font-size: 20px; } }
+    main .students .cohort .card h2 {
+      font-size: 19px; } }
 @media screen and (max-width: 800px) {
-  main section .popup .bio-container .bio-content p {
+  main .students .popup .bio-container .bio-content p {
     line-height: 18px; }
-  main section .cohort .card h2 {
-    font-size: 19px; } }
+  main .students .cohort .card h2 {
+    font-size: 17px; }
+  main .students .popup .bio-container .bio-content h2 {
+    padding-top: 3.5%; } }
 @media screen and (max-width: 700px) {
-  main section .popup .bio-container .bio-content p {
+  main .students .popup .bio-container .bio-content p {
     line-height: 17px;
     font-size: 17px; }
-  main section .popup .bio-container .bio-content h3 {
-    top: 27%; }
-  main section .cohort .cohort-logo {
+  main .students .cohort .cohort-logo {
     width: 98%; }
-  main section .cohort .nojQuery.card:before {
+  main .students .cohort .nojQuery.card:before {
     font-size: 22px; }
-  main section .cohort .card {
+  main .students .cohort .card {
     width: 48%; }
-    main section .cohort .card .disciplines .disc {
+    main .students .cohort .card .disciplines .disc {
       width: 44px;
       height: 44px;
       font-size: 21px;
       line-height: 44px; }
-    main section .cohort .card h2 {
-      font-size: 24px; } }
+    main .students .cohort .card h2 {
+      font-size: 20px; }
+  main .students .popup .bio-container .bio-content h2 {
+    padding-top: 5%; } }
 @media screen and (max-width: 640px) {
-  main section .cohort .nojQuery.card:before {
+  main .students .cohort .nojQuery.card:before {
     font-size: 24px; } }
 @media screen and (max-width: 600px) {
-  main section .popup .bio-container .bio-content p {
+  main .students .popup .bio-container .bio-content p {
     line-height: 16px;
     font-size: 16px; }
-  main section .cohort .card h2 {
-    font-size: 22px; } }
+  main .students .cohort .card h2 {
+    font-size: 18px; } }
 @media screen and (max-width: 550px) {
   .sidebar .filters {
     width: 100%;
@@ -709,18 +775,19 @@ main {
     .sidebar .filters .filter span {
       border-top-right-radius: 5px; }
       .sidebar .filters .filter span .arrow-down {
-        border: 0;
-        border: solid transparent;
-        border-width: 7px;
+        position: absolute;
+        right: 7.5%;
         top: 15px;
-        right: 8%;
-        border-top-color: #FEFBFC; }
+        border: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid #FEFBFC; }
     .sidebar .filters .filter .filter-items {
       left: 0;
       top: 35px;
       border-top-right-radius: 0; }
     .sidebar .filters .filter .active-filter {
-      background-color: #5C0F19;
+      background-color: #000;
       border-top-right-radius: 5px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -728,69 +795,319 @@ main {
   .sidebar .filters-animate {
     left: 0; }
 
-  main section .popup .arrow-up {
+  main .students .popup .arrow-up {
     top: -2%; }
-  main section .popup .bio-container .bio-content h2 {
+  main .students .popup .bio-container .bio-content h2 {
+    position: absolute;
     width: 80%;
     left: 10%;
     top: 5%;
-    font-size: 32px; }
-  main section .popup .bio-container .bio-content h3 {
+    padding-top: 0;
+    font-size: 28px; }
+  main .students .popup .bio-container .bio-content h3 {
+    position: absolute;
     width: 80%;
     left: 10%;
-    top: 12.5%;
+    top: 14%;
     font-size: 20px; }
-  main section .popup .bio-container .bio-content h4 {
+  main .students .popup .bio-container .bio-content h4 {
     width: 80%;
     left: 10%;
     top: 17.5%; }
-  main section .popup .bio-container .bio-content .bio {
+  main .students .popup .bio-container .bio-content .bio {
     width: 80%;
     left: 10%;
-    top: 45%;
+    top: 50%;
     font-size: 18px;
     line-height: 20px; }
-  main section .popup .bio-container .bio-content p {
+  main .students .popup .bio-container .bio-content p {
     width: 80%;
     left: 10%;
     bottom: 5%; }
-    main section .popup .bio-container .bio-content p a {
+    main .students .popup .bio-container .bio-content p a {
       width: 31.33%; }
-      main section .popup .bio-container .bio-content p a span {
+      main .students .popup .bio-container .bio-content p a span {
         display: inline-block; }
-      main section .popup .bio-container .bio-content p a .fa {
+      main .students .popup .bio-container .bio-content p a .fa {
         display: none; }
-  main section .cohort .card h2 {
-    font-size: 20px; } }
+  main .students .cohort .card h2 {
+    font-size: 18px; } }
 @media screen and (max-width: 480px) {
-  main section .cohort .card {
+  header#alumni-image-tiles .dynamic img {
+    width: 50%; }
+
+  main .students .cohort .card {
     width: 98%; }
-    main section .cohort .card h2 {
+    main .students .cohort .card h2 {
       font-size: 26px; }
-    main section .cohort .card .disciplines {
+    main .students .cohort .card .disciplines {
       top: 10px;
       right: 10px; }
-      main section .cohort .card .disciplines .disc {
+      main .students .cohort .card .disciplines .disc {
         width: 50px;
         height: 50px;
         font-size: 24px;
-        line-height: 50px; } }
-@media screen and (max-width: 440px) {
-  .sidebar input.search {
-    width: 150px; }
-
-  main section .popup .bio-container .bio-content h2 {
-    font-size: 26px; }
-  main section .popup .bio-container .bio-content h4 {
+        line-height: 50px; }
+  main .students .popup .bio-container .bio-content h2 {
+    background-color: transparent;
+    font-size: 26px;
+    line-height: 26px; }
+  main .students .popup .bio-container .bio-content h4 {
     font-size: 20px;
     line-height: 26px; }
-  main section .popup .bio-container .bio-content .bio {
+  main .students .popup .bio-container .bio-content .bio {
     top: 42.5%;
     font-size: 20px;
-    line-height: 24px; }
-  main section .popup .bio-container .bio-content p a span {
+    line-height: 24px; } }
+@media screen and (max-width: 440px) {
+  .sidebar .filter-label {
+    width: 140px ;}
+  .sidebar input.search {
+    width: 140px; }
+  main .students .popup .bio-container .bio-content p a span {
     display: none; }
-  main section .popup .bio-container .bio-content p a .fa {
+  main .students .popup .bio-container .bio-content p a .fa {
     display: inline-block; } }
 
+@-webkit-keyframes ball-triangle-path-1 {
+  33% {
+    -webkit-transform: translate(25px, -50px);
+            transform: translate(25px, -50px); }
+
+  66% {
+    -webkit-transform: translate(50px, 0px);
+            transform: translate(50px, 0px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-moz-keyframes ball-triangle-path-1 {
+  33% {
+    -moz-transform: translate(25px, -50px);
+            transform: translate(25px, -50px); }
+
+  66% {
+    -moz-transform: translate(50px, 0px);
+            transform: translate(50px, 0px); }
+
+  100% {
+    -moz-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-o-keyframes ball-triangle-path-1 {
+  33% {
+    -o-transform: translate(25px, -50px);
+            transform: translate(25px, -50px); }
+
+  66% {
+    -o-transform: translate(50px, 0px);
+            transform: translate(50px, 0px); }
+
+  100% {
+    -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@keyframes ball-triangle-path-1 {
+  33% {
+    -webkit-transform: translate(25px, -50px);
+            transform: translate(25px, -50px); }
+
+  66% {
+    -webkit-transform: translate(50px, 0px);
+            transform: translate(50px, 0px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-webkit-keyframes ball-triangle-path-2 {
+  33% {
+    -webkit-transform: translate(25px, 50px);
+            transform: translate(25px, 50px); }
+
+  66% {
+    -webkit-transform: translate(-25px, 50px);
+            transform: translate(-25px, 50px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-moz-keyframes ball-triangle-path-2 {
+  33% {
+    -moz-transform: translate(25px, 50px);
+            transform: translate(25px, 50px); }
+
+  66% {
+    -moz-transform: translate(-25px, 50px);
+            transform: translate(-25px, 50px); }
+
+  100% {
+    -moz-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-o-keyframes ball-triangle-path-2 {
+  33% {
+    -o-transform: translate(25px, 50px);
+            transform: translate(25px, 50px); }
+
+  66% {
+    -o-transform: translate(-25px, 50px);
+            transform: translate(-25px, 50px); }
+
+  100% {
+    -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@keyframes ball-triangle-path-2 {
+  33% {
+    -webkit-transform: translate(25px, 50px);
+            transform: translate(25px, 50px); }
+
+  66% {
+    -webkit-transform: translate(-25px, 50px);
+            transform: translate(-25px, 50px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-webkit-keyframes ball-triangle-path-3 {
+  33% {
+    -webkit-transform: translate(-50px, 0px);
+            transform: translate(-50px, 0px); }
+
+  66% {
+    -webkit-transform: translate(-25px, -50px);
+            transform: translate(-25px, -50px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-moz-keyframes ball-triangle-path-3 {
+  33% {
+    -moz-transform: translate(-50px, 0px);
+            transform: translate(-50px, 0px); }
+
+  66% {
+    -moz-transform: translate(-25px, -50px);
+            transform: translate(-25px, -50px); }
+
+  100% {
+    -moz-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@-o-keyframes ball-triangle-path-3 {
+  33% {
+    -o-transform: translate(-50px, 0px);
+            transform: translate(-50px, 0px); }
+
+  66% {
+    -o-transform: translate(-25px, -50px);
+            transform: translate(-25px, -50px); }
+
+  100% {
+    -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+@keyframes ball-triangle-path-3 {
+  33% {
+    -webkit-transform: translate(-50px, 0px);
+            transform: translate(-50px, 0px); }
+
+  66% {
+    -webkit-transform: translate(-25px, -50px);
+            transform: translate(-25px, -50px); }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); } }
+
+.ball-triangle-path {
+  position: relative;
+  -webkit-transform: translate(-29.994px, -37.50938px);
+     -moz-transform: translate(-29.994px, -37.50938px);
+       -o-transform: translate(-29.994px, -37.50938px);
+      -ms-transform: translate(-29.994px, -37.50938px);
+          transform: translate(-29.994px, -37.50938px); }
+  .ball-triangle-path > div:nth-child(1) {
+    -webkit-animation-name: ball-triangle-path-1;
+       -moz-animation-name: ball-triangle-path-1;
+         -o-animation-name: ball-triangle-path-1;
+            animation-name: ball-triangle-path-1;
+    -webkit-animation-delay: 0;
+       -moz-animation-delay: 0;
+         -o-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 2s;
+       -moz-animation-duration: 2s;
+         -o-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+       -moz-animation-timing-function: ease-in-out;
+         -o-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .ball-triangle-path > div:nth-child(2) {
+    -webkit-animation-name: ball-triangle-path-2;
+       -moz-animation-name: ball-triangle-path-2;
+         -o-animation-name: ball-triangle-path-2;
+            animation-name: ball-triangle-path-2;
+    -webkit-animation-delay: 0;
+       -moz-animation-delay: 0;
+         -o-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 2s;
+       -moz-animation-duration: 2s;
+         -o-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+       -moz-animation-timing-function: ease-in-out;
+         -o-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .ball-triangle-path > div:nth-child(3) {
+    -webkit-animation-name: ball-triangle-path-3;
+       -moz-animation-name: ball-triangle-path-3;
+         -o-animation-name: ball-triangle-path-3;
+            animation-name: ball-triangle-path-3;
+    -webkit-animation-delay: 0;
+       -moz-animation-delay: 0;
+         -o-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 2s;
+       -moz-animation-duration: 2s;
+         -o-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+       -moz-animation-timing-function: ease-in-out;
+         -o-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  .ball-triangle-path > div {
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #E2263D; }
+    .ball-triangle-path > div:nth-of-type(1) {
+      top: 50px; }
+    .ball-triangle-path > div:nth-of-type(2) {
+      left: 25px; }
+    .ball-triangle-path > div:nth-of-type(3) {
+      top: 50px;
+      left: 50px; }
 /*# sourceMappingURL=style.css.map */

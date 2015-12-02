@@ -3,29 +3,41 @@
 ** Layout and Filter functionality change with window resolution
 */
 
+// Cohort Filter
+var buttonFilter = 'all';
+
 (function(){
+
+    var isFilterOpen = false;
+
     // Standard Width
     // Opening Filter Menus Click Events
 
-	$(document).on('click', '.filter span', function() {
+	$(document).on('click', '.filter span', function(e) {
+        e.preventDefault();
+
 		$(this).toggleClass('active-filter');
-        $(this).parent().siblings('.filter').children('.filter-items').hide();
+        $(this).parent().siblings('.filter').children('.filter-items').removeClass('active');
         $(this).parent().siblings('.filter').children('span').removeClass('active-filter').children().removeClass('active-filter');
-        $(this).siblings('.filter-items').slideToggle(200);
+
+        $(this).siblings('.filter-items').toggleClass("active");
 	});
 
 
     // Width < 885px
 
-	$(document).on('click', '.filter-label', function() {
-        var scrollTopPos = $('main section').offset().top - 80;
-        var scrollCurrPos = $('body').scrollTop();
+	$(document).on('click', '.filter-label', function(e) {
+        e.preventDefault();
+
+        var scrollTopPos = Math.floor( $('main section').offset().top - 140 );
+        var $doc = $('html, body');
+        var scrollCurrPos = $(document).scrollTop();
 
         $('.active-filter').removeClass('active-filter');
-        $('.filter-items').hide();
+        $('.active').removeClass('active');
 
         if (scrollCurrPos < scrollTopPos) {
-            $('body').animate({
+            $doc.animate({
                 scrollTop: scrollTopPos
             }, 300);
             setTimeout(function() {
@@ -62,11 +74,18 @@
     ** Filtering Functionality
     ** By Cohorts
     */
-    var $cohortOption = $('.button-group'),
-        buttonFilter = 'all';
+    var $cohortOption = $('.button-group');
 
     $cohortOption.on('click', '.filter-item .button', function() {
+        // Reset Popup
+        $('.popup').remove();
+        popupIsOpen = false;
+
+        // Set button filter value
         buttonFilter = $(this).attr('data-filter');
+
+        // Set URL
+        hasher.replaceHash(buttonFilter);
 
         var cohort = $.grep( cohorts, function( e ) {
             return e.cohort == buttonFilter;
@@ -100,6 +119,13 @@
         filteredAvailList = [];
 
     $checkboxes.on('change', function() {
+        // Reset popup
+        $('.popup').remove();
+        popupIsOpen = false;
+
+        // Reset Hash
+        hasher.replaceHash(hasher.getHashAsArray()[0]);
+
         var newStudentArray = [],
             newCohortArray = [];
 
@@ -124,7 +150,7 @@
         // Click event for availability checkboxes
         else if ( $(this).closest('.filter-group').hasClass('availability-filters') ) {
             availFilters = filterArrays(availFilters, skillFilters);
-            filteredAvailList = checkFilters(newStudentArray, 'available', availFilters);
+            filteredAvailList = uniq( checkMultiFilters(newStudentArray, 'available', availFilters) );
         }
 
         newStudentArray = filterClick(newStudentArray);
@@ -147,7 +173,7 @@
             }
         }
         else if ( newStudentArray.length === 0 ) {
-            console.log('no students');
+            $('#target').html('<p class="no-students">No students available.</p>');
         }
     });
 
@@ -191,7 +217,7 @@
         return newArr.concat(arr);
     }
 
-    // Checks if arr1 contains elements in arr2 and if so, pushes object to new array
+    // Checks if arr1 contains key elements in arr2 and if so, pushes object to new array
     function checkFilters(arr1, key, arr2) {
         var newArr = [];
 
@@ -202,6 +228,26 @@
         }
 
         return newArr;
+    }
+
+    function checkMultiFilters(arr1, key, arr2) {
+        var newArr = [];
+
+        for ( var i = 0; i < arr1.length; i++ ) {
+            for ( var j = 0; j < arr2.length; j++ ) {
+                if ( $.inArray( arr2[j], arr1[i][key] ) > -1 ) {
+                    newArr.push(arr1[i]);
+                }
+            }
+        }
+
+        return newArr;
+    }
+
+    function uniq(a) {
+        return a.sort().filter(function(item, pos, ary) {
+            return !pos || item != ary[pos - 1];
+        });
     }
 
     // http://stackoverflow.com/questions/9204283/how-to-check-whether-multiple-values-exist-within-an-javascript-array
@@ -233,6 +279,7 @@
     ** Used for finding the matching cohort's index value
     ** Needed for resetting infinite scroll
     */
+
     // function getIndexBy(array, name, value) {
     //     for (var i = 0; i < array.length; i++) {
     //         if (array[i][name] == value) {
@@ -249,8 +296,13 @@
         var newStudentArray = [];
             newCohortArray = cohorts;
 
+        buttonFilter = 'all';
+
         // use value of search field to filter
         var $quicksearch = $('.search').keyup( debounce( function() {
+            hasher.replaceHash(buttonFilter);
+            popupIsOpen = false;
+
             var name = $('.search').val();
 
             if ( name === '' ) {
@@ -276,7 +328,7 @@
                 getStudents('js/templates/filtered-students.html', newCohortArray);
                 $(window).off('scroll', lazyLoader);
             }
-        }, 500) );
+        }, 200) );
     });
 
     // Remove specific items from array

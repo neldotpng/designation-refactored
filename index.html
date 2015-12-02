@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/loaders.css">
 	<link rel="stylesheet" href="css/style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
 </head>
-
 <body>
-	<header>
+    <div class="loader">
+        <div class="loader-inner ball-triangle-path">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+	<header id="alumni-image-tiles">
 		<div class="top-bar">
 			<a href="http://www.designation.io">
 				<img src="img/logo_white.png" alt="logo">
 			</a>
 		</div>
 
-        <h1>Meet Our Alumni</h1>
-
         <div id="imgWrapper" class="dynamic"></div>
+        <h1>Meet Our Alumni</h1>
+        <div class="header-button"><i class="fa fa-angle-down"></i></div>
 	</header>
 
     <nav class="sidebar clearfix">
@@ -94,16 +99,23 @@
     </nav>
 
 	<main>
-		<section id="target" class="clearfix"></section>
+		<section id="target" class="students clearfix"></section>
 	</main>
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/lib/signals.js"></script>
+    <script src="js/lib/crossroads.min.js"></script>
+    <script src="js/lib/hasher.min.js"></script>
 
     <!-- Other -->
     <script src="js/template.js"></script>
     <script src="js/header.js"></script>
     <script src="js/card.js"></script>
     <script src="js/filters.js"></script>
+    <script src="js/routing.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 
 </html>

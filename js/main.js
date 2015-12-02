@@ -1,3 +1,5 @@
+var $window = $(window);
+
 /*
 ** Cohort Constructor
 */
@@ -28,7 +30,7 @@ function Student(student, cohort) {
 	this.available = student.available;
 	this.bio = student.bio;
 	this.portfolio = student.portfolio;
-	this.twitter = student.twitter;
+	this.email = student.email;
 	this.linkedin = student.linkedin;
 	this.cohort = cohort.cohort;
 	this.year = cohort.year;
@@ -87,7 +89,7 @@ Student.prototype.renderLinks = function() {
 		portfolio = '';
 	} else {
 		portfolio =
-			'<a class="student-portfolio" target="_blank" href="' + this.portfolio + '">' +
+			'<a class="student-portfolio" target="_blank" href="http://' + this.portfolio + '">' +
 				'<span>Portfolio</span>' +
 				'<i class="fa fa-briefcase"></i>' +
 			'</a>';
@@ -162,7 +164,7 @@ var cohorts = [],
 
 function ajaxCall(callback) {
 	$.ajax({
-		url: '/json/main.json',
+		url: 'json/main.json',
 		success: callback,
 		done: function() {
 			console.log('success');
@@ -207,10 +209,14 @@ function myCallback() {
 	shuffledStudents = shuffle(students);
 	imgCount = calcImg(width, height);
 
-	renderHeader(shuffledStudents, imgCount);
+	renderHeader(shuffledStudents, 15);
 
 	getCohortTemplate('#target', cohorts[0]);
 	getFilters(cohorts);
+
+	initHasher();
+
+	initialLoad = true;
 }
 
 /*
@@ -227,8 +233,9 @@ function alphabetize(a, b) {
 
 function init() {
 	ajaxCall(parseStudents);
-	ajaxCall(myCallback);
-	console.log('initialized');
+	setTimeout(function(){
+		ajaxCall(myCallback);
+	}, 500);
 }
 
 /*
@@ -267,12 +274,64 @@ function lazyLoading() {
 		count++;
 		getCohortTemplate('#target', cohorts[count]);
     }
-
-    console.log('iran');
 }
 
 var lazyLoader = debounce(lazyLoading, 50);
 
-$(window).on('scroll', lazyLoader);
+$window.on('scroll', lazyLoader);
+
+var cachedWidth = $(window).width();
+
+$window.on('resize', debounce(function(){
+	if (popupIsOpen) {
+		var newWidth = $window.width();
+
+		if (newWidth !== cachedWidth) {
+			hasher.replaceHash(hasher.getHashAsArray()[0]);
+			bioClose();
+			$('.popup').remove();
+			popupIsOpen = false;
+			cachedWidth = newWidth;
+		}
+	}
+}, 50));
+
+$(document).scroll(function() {
+    var scrollTopPos = $('main section').offset().top - 145;
+    var scrollCurrPos = $('body').scrollTop();
+    var firefoxScroll = $('html').scrollTop();
+
+    if (scrollCurrPos >= scrollTopPos || firefoxScroll >= scrollTopPos) {
+        $('nav.sidebar').addClass('fixed');
+    } else if (scrollCurrPos < scrollTopPos || firefoxScroll >= scrollTopPos) {
+        $('.fixed').removeClass('fixed');
+        $('.active-filter').removeClass('active-filter');
+        $('.filters').removeClass('filters-animate');
+        $('.active').removeClass('active');
+    }
+});
+
+// Prevent scrolling while loader is present on page
+$('.loader').bind('mousewheel DOMMouseScroll', function(e) {
+    var scrollTo = null;
+
+    if (e.type == 'mousewheel') {
+        scrollTo = (e.originalEvent.wheelDelta * -1);
+    }
+    else if (e.type == 'DOMMouseScroll') {
+        scrollTo = 40 * e.originalEvent.detail;
+    }
+
+    if (scrollTo) {
+        e.preventDefault();
+        $(this).scrollTop(scrollTo + $(this).scrollTop());
+    }
+});
+
+$window.on('load', function(){
+	setTimeout(function(){
+		$('.loader').remove();
+	}, 500);
+});
 
 init();

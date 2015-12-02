@@ -3,7 +3,7 @@ function getCohortTemplate(target, cohort) {
     var template;
 
     $.ajax({
-        url: 'js/templates/cohorts.html', //ex. js/templates/mytemplate.handlebars
+        url: '/alumni/js/templates/cohorts.html', //ex. /alumni/js/templates/mytemplate.handlebars
         cache: true,
         success: function(data) {
             source    = data;
@@ -18,7 +18,7 @@ function getFilters(datum) {
     var template;
 
     $.ajax({
-        url: 'js/templates/filter-item.html', //ex. js/templates/mytemplate.handlebars
+        url: '/alumni/js/templates/filter-item.html', //ex. /alumni/js/templates/mytemplate.handlebars
         cache: true,
         success: function(data) {
             source    = data;
@@ -33,12 +33,28 @@ function getStudents(path, datum) {
     var template;
 
     $.ajax({
-        url: path, //ex. js/templates/mytemplate.handlebars
+        url: path, //ex. /alumni/js/templates/mytemplate.handlebars
         cache: true,
         success: function(data) {
             source    = data;
             template  = Handlebars.compile(source);
             $('#target').html(template(datum));
+        }
+    });
+}
+
+function initStudents(datum, callback) {
+    var source;
+    var template;
+
+    $.ajax({
+        url: '/alumni/js/templates/cohorts.html', //ex. /alumni/js/templates/mytemplate.handlebars
+        cache: true,
+        success: function(data) {
+            source    = data;
+            template  = Handlebars.compile(source);
+            $('#target').html(template(datum));
+            callback();
         }
     });
 }

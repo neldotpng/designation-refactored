@@ -1,158 +1,169 @@
-(function(){
+// Card Position
+var leftPos;
 
-	// Card Position
-	var leftPos;
+/*
+** Card Click Functionality
+** Animation Adjusts with Window Size
+*/
 
-	var $window = $(window);
+function cardClick(e) {
+	var cardId = $(e).attr('id'),
+		thisCard = $('#' + cardId),
 
-	/*
-	** Card Click Functionality
-	** Animation Adjusts with Window Size
-	*/
+		student = $.grep( students, function( e ) {
+			return e.id == cardId;
+		}),
+		bio = student[0].renderStudentBio();
 
-	function cardClick(e) {
-		var cardId = $(e).attr('id'),
-			thisCard = $('#' + cardId),
+	var topPos = thisCard.offset().top - $('main section').offset().top,
+		popHeight = thisCard.height(),
+		margin = parseFloat(thisCard.css('margin-top'));
 
-			student = $.grep( students, function( e ) {
-				return e.id == cardId;
-			}),
-			bio = student[0].renderStudentBio();
+	// Parent card position
+	leftPos = thisCard.position().left;
 
-		var topPos = thisCard.offset().top - $('main section').offset().top,
-			popHeight = thisCard.height(),
-			margin = parseFloat(thisCard.css('margin-top'));
+	// Set Hasher
+	var name = replaceSpaces(student[0].name),
+		cohort = student[0].cohort;
+	hasher.replaceHash(cohort + '/' + name);
 
-		leftPos = thisCard.position().left;
+	// Image Slide Animation
 
-		// Image Slide Animation
+	if ( $window.width() > 885 ) {
+		$('main section').append(bio);
 
-		if ( $window.width() > 885 ) {
+		$('.popup').css('top', topPos).css('height', popHeight);
+		$('.img-pop').css('left', leftPos);
+
+		$('.img-pop').animate({
+			"left": "0"
+		}, 200, "linear");
+
+		$('.popup').addClass('popup-animate');
+		$('.img-pop').addClass('img-pop-animate');
+
+		setTimeout(function() {
+			$('.bio-container').addClass('bio-container-animate');
+			$('.bio-content').addClass('bio-content-animate');
+		}, 600);
+
+
+	// Modal view for popup on lower resolution screens
+
+	} else if ( $window.width() <= 885 ) {
+		var popDownPos = margin + margin + popHeight,
+			popDownHeight = popDownPos + popHeight,
+			popupArrow = leftPos + (thisCard.height()/2.3);
+
+		console.log('early', thisCard.offset().top);
+
+		thisCard.removeClass('nojQuery');
+		thisCard.children('.disciplines').css('visibility', 'hidden');
+		thisCard.css('height', popDownHeight);
+
+		if ( $window.width() <= 480 ) {
+			thisCard.append(bio);
+			$('.popup').css('top', popHeight + margin + margin)
+				.css('height', popHeight).css('width', '100%').css('left', '0');
+		} else {
 			$('main section').append(bio);
-
-			$('.popup').css('top', topPos).css('height', popHeight);
-			$('.img-pop').css('left', leftPos);
-
-			$('.img-pop').animate({
-				"left": "0"
-			}, 200, "linear");
-
-			$('.popup').addClass('popup-animate');
-			$('.img-pop').addClass('img-pop-animate');
-
-			setTimeout(function() {
-				$('.bio-container').addClass('bio-container-animate');
-				$('.bio-content').addClass('bio-content-animate');
-			}, 600);
-
-
-		// Modal view for popup on lower resolution screens
-
-		} else if ( $window.width() <= 885 ) {
-			var popDownPos = margin + margin + popHeight,
-				popDownHeight = popDownPos + popHeight,
-				popupArrow = leftPos + (thisCard.height()/2.4);
-
-			thisCard.removeClass('nojQuery');
-			thisCard.css('height', popDownHeight);
-            thisCard.children('.disciplines').css('visibility', 'hidden');
-
-			$('main section').append(bio);
-
-            $('.popup').css('top', topPos + popDownPos)
+			$('.popup').css('top', topPos + popDownPos)
 				.css('height', popHeight);
-
-			// Mobile Popup Height			
-            if ( $window.width() <= 550 ) {
-				$('.popup').css('height', popDownHeight / 1.1);
-				thisCard.css('height', (popDownHeight / 1.1) + popDownPos);
-            }
-
-            $('.arrow-up').css('left', popupArrow);
-
-            setTimeout(function() {
-				$('.popup').addClass('popup-animate');
-                $('.arrow-up').addClass('arrow-up-animate');
-                $('.bio-content').addClass('bio-content-animate');
-            }, 200);
 		}
-	}
 
-	/*
-	** Close Biography Popup
-	*/
+		// Mobile Popup Height			
+        if ( $window.width() <= 550 ) {
+			$('.popup').css('height', popDownHeight);
+			thisCard.css('height', popDownHeight + popDownPos);
+        }
 
-	function bioClose() {
+        $('.arrow-up').css('left', popupArrow);
 
-		// Image Slide Animation
+        setTimeout(function() {
+			$('.popup').addClass('popup-animate');
+            $('.arrow-up').addClass('arrow-up-animate');
+            $('.bio-content').addClass('bio-content-animate');
+        }, 200);
 
-		if ( $window.width() > 885 ) {
-			$('.bio-container-animate').removeClass('bio-container-animate');
-			$('.bio-content-animate').removeClass('bio-content-animate');
-
-			setTimeout(function() {
-				$('.img-pop').animate({
-					'left': leftPos
-				}, 150, 'linear');
+        var $doc = $('html, body');
+        setTimeout(function(){
+			console.log('later', thisCard.offset().top);
+			$doc.animate({
+				scrollTop: thisCard.offset().top - 130
 			}, 200);
-
-			setTimeout(function() {
-				$('.popup-animate').removeClass('popup-animate');
-			}, 550);
-
-			setTimeout(function() {
-				$('.popup').remove();
-				popupIsOpen = false;
-			}, 850);
-		
-		// Collapse in modal animation
-
-		} else if ( $window.width() <= 885 ) {
-			var card = $('.popup').data().card;
-
-			$('.popup').removeClass('popup-animate');
-
-			setTimeout(function() {
-				$('.popup').remove();
-				popupIsOpen = false;
-				$('#' + card).addClass('nojQuery').css('height', '')
-					.children('.disciplines').css('visibility', '');
-			}, 300);
-		}
+        }, 300);
 	}
+}
 
-	/*
-	** Clear Timeouts Function
-	*/
+/*
+** Close Biography Popup
+*/
 
-	// function clearTimeouts() {
-	// 	var id = window.setTimeout(function() {}, 0);
-	// 	while (id--) {
-	// 		window.clearTimeout(id); // will do nothing if no timeout with id is present
-	// 	}
-	// }
+function bioClose() {
 
-	/*
-	** Click Events
-	** Need to be bound to document for loading reasons
-	*/
+	// Image Slide Animation
 
-	var popupIsOpen = false;
+	if ( $window.width() > 885 ) {
+		$('.bio-container-animate').removeClass('bio-container-animate');
+		$('.bio-content-animate').removeClass('bio-content-animate');
 
-	$(document).on('click', '.nojQuery', function(e) {
-		if ( popupIsOpen ) {
-			var card = $('.popup').data().card;
+		setTimeout(function() {
+			$('.img-pop').animate({
+				'left': leftPos
+			}, 150, 'linear');
+		}, 200);
+
+		setTimeout(function() {
+			$('.popup-animate').removeClass('popup-animate');
+		}, 550);
+
+		// Reset Popup and Hash
+		setTimeout(function() {
+			$('.popup').remove();
+			popupIsOpen = false;
+			hasher.replaceHash(buttonFilter);
+		}, 850);
+	
+	// Collapse in modal animation
+
+	} else if ( $window.width() <= 885 ) {
+		var card = $('.popup').data().card;
+
+		$('.popup').removeClass('popup-animate');
+
+		// Reset popup and hash
+		setTimeout(function() {
+			$('.popup').remove();
 			$('#' + card).addClass('nojQuery').css('height', '')
 				.children('.disciplines').css('visibility', '');
-		}
+			hasher.replaceHash(buttonFilter);
+			popupIsOpen = false;
+		}, 300);
+	}
+}
 
-		$('.popup').remove();
-		cardClick(this);
+/*
+** Click Events
+** Need to be bound to document for loading reasons
+*/
 
-		popupIsOpen = true;
-	});
+var popupIsOpen = false;
 
-	$(document).on('click', '.close', function() {
-		bioClose();
-	});
-})();
+$(document).on('click', '.nojQuery', function(e) {
+	e.preventDefault();
+
+	if ( popupIsOpen ) {
+		var $card = $('.popup').data().card;
+		$('#' + $card).addClass('nojQuery').removeAttr('style');
+	}
+
+	$('.popup').remove();
+	cardClick(this);
+
+	popupIsOpen = true;
+});
+
+$(document).on('touchend click', '.close', function(e) {
+	e.preventDefault();
+	bioClose();
+});
